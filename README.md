@@ -1,4 +1,4 @@
-# Campus Sentinel — Stage 1: Campus Mapping & Geometry Extraction
+ # Campus Sentinel — Stage 1: Campus Mapping & Geometry Extraction
 
 **Campus Sentinel** is a hybrid Wi-Fi-based environment monitoring and digital-twin engineering platform.
 
@@ -146,5 +146,6 @@ The Stage 1 outputs are saved in `data/geometry/` in valid JSON format:
 - `data/geometry/roads_paths.json`: Circulation paths and road networks.
 - `data/geometry/stage1_validation.md`: Formal engineering certification report.
 
-#   t e c h n o - p i r a t e s  
+#   t e c h n o - p i r a t e s 
+ 
  

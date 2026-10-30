@@ -1,0 +1,8 @@
+{
+  "dataset": "Campus Sentinel illustrative exterior geometry",
+  "coordinate_system": "scene_units",
+  "accuracy_status": "not_geographic_or_metric",
+  "source": "visual prototype",
+  "priority_buildings": ["6", "9B", "60", "410", "720"],
+  "note": "Do not use as a replacement for audited source geometry or real-world dimensions."
+}

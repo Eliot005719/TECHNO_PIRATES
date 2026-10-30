@@ -1,0 +1,11 @@
+{
+  "building_id": "410",
+  "floor_id": "illustrative_floor_1",
+  "accuracy_status": "illustrative",
+  "rooms": [
+    {"room_id":"lobby","name":"Welcome Lobby","type":"lobby"},
+    {"room_id":"storage_room_01","name":"Storage Room","type":"storage"},
+    {"room_id":"classroom_a","name":"Seminar Room","type":"classroom"}
+  ],
+  "note": "This is a configurable prototype floor layout, not a verified Mt. SAC floor plan."
+}

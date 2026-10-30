@@ -1,0 +1,76 @@
+{
+  "source_pdf": "data\\raw\\campus_map.pdf",
+  "source_size_bytes": 2159248,
+  "metadata": {
+    "format": "PDF 1.7",
+    "title": "Mt. SAC Campus Map",
+    "author": "Jeffrey B. George",
+    "subject": "",
+    "keywords": "",
+    "creator": "Adobe InDesign 20.1 (Macintosh)",
+    "producer": "Adobe PDF Library 17.0",
+    "creationDate": "D:20250128161319-08'00'",
+    "modDate": "D:20260622142309-07'00'",
+    "trapped": "",
+    "encryption": null,
+    "page_count": 3,
+    "pages": [
+      {
+        "page_number": 0,
+        "width_pts": 792.0,
+        "height_pts": 612.0,
+        "rotation": 0,
+        "num_drawings": 385,
+        "num_images": 8,
+        "text_length": 479
+      },
+      {
+        "page_number": 1,
+        "width_pts": 792.0,
+        "height_pts": 612.0,
+        "rotation": 0,
+        "num_drawings": 6,
+        "num_images": 1,
+        "text_length": 216
+      },
+      {
+        "page_number": 2,
+        "width_pts": 792.0,
+        "height_pts": 612.0,
+        "rotation": 0,
+        "num_drawings": 3,
+        "num_images": 0,
+        "text_length": 14793
+      }
+    ]
+  },
+  "rendered_pages": [
+    {
+      "output_path": "C:\\tmp\\Campus-Sentinel\\data\\processed\\map_pages\\page_0.png",
+      "width": 3300,
+      "height": 2550,
+      "dpi": 300,
+      "size_bytes": 13098332
+    },
+    {
+      "output_path": "C:\\tmp\\Campus-Sentinel\\data\\processed\\map_pages\\page_1.png",
+      "width": 3300,
+      "height": 2550,
+      "dpi": 300,
+      "size_bytes": 7914486
+    },
+    {
+      "output_path": "C:\\tmp\\Campus-Sentinel\\data\\processed\\map_pages\\page_2.png",
+      "width": 3300,
+      "height": 2550,
+      "dpi": 300,
+      "size_bytes": 1172987
+    }
+  ],
+  "campus_base_image": {
+    "path": "data\\processed\\campus_base.png",
+    "width": 3159,
+    "height": 2409,
+    "format": "PNG"
+  }
+}

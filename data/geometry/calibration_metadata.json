@@ -1,0 +1,35 @@
+{
+  "calibration_status": "UNVERIFIED",
+  "calibration_method": "Audit rejection of unsupported legacy calibration",
+  "scale_meters_per_pixel": null,
+  "pixels_per_meter": null,
+  "source_image": {
+    "width_pixels": 3159,
+    "height_pixels": 2409,
+    "crop": "embedded page-1 campus raster; no crop offset applied"
+  },
+  "coordinate_transform": {
+    "pixel_origin": [
+      0,
+      0
+    ],
+    "X": "right",
+    "Y": "down",
+    "metric_transform_available": false
+  },
+  "track_benchmark": {
+    "status": "REJECTED",
+    "reason": "Legacy track coordinates and 572.5 x 363 px dimensions do not identify the mapped track boundary; a 400 m event distance does not establish an outer footprint."
+  },
+  "legacy_calibration_audit": {
+    "hard_coded_effective_scale_m_per_px": 0.335,
+    "reported_global_rmse_m": 259.92,
+    "conclusion": "A single global metre-per-pixel scale is not defensible from the supplied controls."
+  },
+  "required_for_metric_release": [
+    "surveyed/GIS control points",
+    "documented affine or projective fit",
+    "independent residuals",
+    "priority-footprint digitisation with review"
+  ]
+}

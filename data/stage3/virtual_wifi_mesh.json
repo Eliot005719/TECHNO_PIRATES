@@ -1,0 +1,13 @@
+{
+  "dataset": "Campus Sentinel virtual Wi-Fi mesh",
+  "accuracy_status": "simulated_illustrative",
+  "scope": "visual topology only",
+  "excluded": ["live readings", "RF propagation", "signal strength", "network integration"],
+  "nodes": [
+    {"id":"ap-campus-west","name":"Campus West","band":"6 GHz","building":null,"room":null,"active":true},
+    {"id":"ap-campus-core","name":"Campus Core","band":"6 GHz","building":null,"room":null,"active":true},
+    {"id":"ap-campus-east","name":"Campus East","band":"5 GHz","building":null,"room":null,"active":true},
+    {"id":"ap-410-hall","name":"410 Hallway","band":"5 GHz","building":"410","room":"hallway","active":true},
+    {"id":"ap-410-storage","name":"410 Storage","band":"6 GHz","building":"410","room":"storage_room_01","active":true}
+  ]
+}

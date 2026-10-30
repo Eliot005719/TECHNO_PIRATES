@@ -1,0 +1,7794 @@
+[
+  {
+    "id": "road_path_001",
+    "type": "road",
+    "name": "Circulation Road 1",
+    "pixel_coordinates": [
+      [
+        2391.0,
+        2128.0
+      ],
+      [
+        2200.0,
+        2071.0
+      ],
+      [
+        2144.9020021074816,
+        1962.253951527924
+      ],
+      [
+        2130.7167422975876,
+        2288.5149271554815
+      ],
+      [
+        2201.0,
+        2316.0
+      ],
+      [
+        2391.0,
+        2128.0
+      ]
+    ],
+    "geometry": [
+      [
+        2391.0,
+        2128.0
+      ],
+      [
+        2200.0,
+        2071.0
+      ],
+      [
+        2144.9020021074816,
+        1962.253951527924
+      ],
+      [
+        2130.7167422975876,
+        2288.5149271554815
+      ],
+      [
+        2201.0,
+        2316.0
+      ],
+      [
+        2391.0,
+        2128.0
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 41724.42,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_002",
+    "type": "road",
+    "name": "Circulation Road 2",
+    "pixel_coordinates": [
+      [
+        1783,
+        1627
+      ],
+      [
+        1683,
+        1647
+      ],
+      [
+        1712,
+        1972
+      ],
+      [
+        1210,
+        2283
+      ],
+      [
+        1438,
+        2179
+      ],
+      [
+        1532,
+        2269
+      ],
+      [
+        1630,
+        2230
+      ],
+      [
+        1474,
+        2155
+      ],
+      [
+        1732,
+        1959
+      ],
+      [
+        1783,
+        1627
+      ]
+    ],
+    "geometry": [
+      [
+        1783,
+        1627
+      ],
+      [
+        1683,
+        1647
+      ],
+      [
+        1712,
+        1972
+      ],
+      [
+        1210,
+        2283
+      ],
+      [
+        1438,
+        2179
+      ],
+      [
+        1532,
+        2269
+      ],
+      [
+        1630,
+        2230
+      ],
+      [
+        1474,
+        2155
+      ],
+      [
+        1732,
+        1959
+      ],
+      [
+        1783,
+        1627
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 39064.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_003",
+    "type": "road",
+    "name": "Circulation Road 3",
+    "pixel_coordinates": [
+      [
+        2139,
+        1445
+      ],
+      [
+        2086,
+        1507
+      ],
+      [
+        2143,
+        1529
+      ],
+      [
+        2031,
+        1596
+      ],
+      [
+        2063,
+        1631
+      ],
+      [
+        2140,
+        1570
+      ],
+      [
+        2146,
+        1697
+      ],
+      [
+        2080,
+        1685
+      ],
+      [
+        2182,
+        1823
+      ],
+      [
+        2269,
+        1710
+      ],
+      [
+        2157,
+        1678
+      ],
+      [
+        2139,
+        1445
+      ]
+    ],
+    "geometry": [
+      [
+        2139,
+        1445
+      ],
+      [
+        2086,
+        1507
+      ],
+      [
+        2143,
+        1529
+      ],
+      [
+        2031,
+        1596
+      ],
+      [
+        2063,
+        1631
+      ],
+      [
+        2140,
+        1570
+      ],
+      [
+        2146,
+        1697
+      ],
+      [
+        2080,
+        1685
+      ],
+      [
+        2182,
+        1823
+      ],
+      [
+        2269,
+        1710
+      ],
+      [
+        2157,
+        1678
+      ],
+      [
+        2139,
+        1445
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 21122.0,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_004",
+    "type": "road",
+    "name": "Circulation Road 4",
+    "pixel_coordinates": [
+      [
+        1562,
+        1283
+      ],
+      [
+        1552,
+        1434
+      ],
+      [
+        1478,
+        1467
+      ],
+      [
+        1521,
+        1533
+      ],
+      [
+        1139,
+        1839
+      ],
+      [
+        1513,
+        1553
+      ],
+      [
+        1589,
+        1574
+      ],
+      [
+        1562,
+        1283
+      ]
+    ],
+    "geometry": [
+      [
+        1562,
+        1283
+      ],
+      [
+        1552,
+        1434
+      ],
+      [
+        1478,
+        1467
+      ],
+      [
+        1521,
+        1533
+      ],
+      [
+        1139,
+        1839
+      ],
+      [
+        1513,
+        1553
+      ],
+      [
+        1589,
+        1574
+      ],
+      [
+        1562,
+        1283
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 14086.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_005",
+    "type": "road",
+    "name": "Circulation Road 5",
+    "pixel_coordinates": [
+      [
+        2880,
+        2240
+      ],
+      [
+        2928,
+        2301
+      ],
+      [
+        2858,
+        2343
+      ],
+      [
+        2953,
+        2343
+      ],
+      [
+        2927,
+        2309
+      ],
+      [
+        2999,
+        2273
+      ],
+      [
+        2998,
+        2343
+      ],
+      [
+        3071,
+        2343
+      ],
+      [
+        3066,
+        2277
+      ],
+      [
+        3007,
+        2261
+      ],
+      [
+        3064,
+        2271
+      ],
+      [
+        3053,
+        2208
+      ],
+      [
+        2976,
+        2194
+      ],
+      [
+        2977,
+        2229
+      ],
+      [
+        2944,
+        2193
+      ],
+      [
+        2880,
+        2240
+      ]
+    ],
+    "geometry": [
+      [
+        2880,
+        2240
+      ],
+      [
+        2928,
+        2301
+      ],
+      [
+        2858,
+        2343
+      ],
+      [
+        2953,
+        2343
+      ],
+      [
+        2927,
+        2309
+      ],
+      [
+        2999,
+        2273
+      ],
+      [
+        2998,
+        2343
+      ],
+      [
+        3071,
+        2343
+      ],
+      [
+        3066,
+        2277
+      ],
+      [
+        3007,
+        2261
+      ],
+      [
+        3064,
+        2271
+      ],
+      [
+        3053,
+        2208
+      ],
+      [
+        2976,
+        2194
+      ],
+      [
+        2977,
+        2229
+      ],
+      [
+        2944,
+        2193
+      ],
+      [
+        2880,
+        2240
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 19258.0,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_006",
+    "type": "road",
+    "name": "Circulation Road 6",
+    "pixel_coordinates": [
+      [
+        1887,
+        1280
+      ],
+      [
+        1815,
+        1305
+      ],
+      [
+        1752,
+        1197
+      ],
+      [
+        1777,
+        1345
+      ],
+      [
+        1623,
+        1465
+      ],
+      [
+        1770,
+        1359
+      ],
+      [
+        1640,
+        1480
+      ],
+      [
+        1767,
+        1381
+      ],
+      [
+        1836,
+        1388
+      ],
+      [
+        1887,
+        1280
+      ]
+    ],
+    "geometry": [
+      [
+        1887,
+        1280
+      ],
+      [
+        1815,
+        1305
+      ],
+      [
+        1752,
+        1197
+      ],
+      [
+        1777,
+        1345
+      ],
+      [
+        1623,
+        1465
+      ],
+      [
+        1770,
+        1359
+      ],
+      [
+        1640,
+        1480
+      ],
+      [
+        1767,
+        1381
+      ],
+      [
+        1836,
+        1388
+      ],
+      [
+        1887,
+        1280
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 11799.0,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_007",
+    "type": "road",
+    "name": "Circulation Road 7",
+    "pixel_coordinates": [
+      [
+        1416,
+        1568
+      ],
+      [
+        1168,
+        1578
+      ],
+      [
+        1224,
+        1601
+      ],
+      [
+        1282,
+        1693
+      ],
+      [
+        1386,
+        1577
+      ],
+      [
+        1410,
+        1579
+      ],
+      [
+        1393,
+        1611
+      ],
+      [
+        1416,
+        1568
+      ]
+    ],
+    "geometry": [
+      [
+        1416,
+        1568
+      ],
+      [
+        1168,
+        1578
+      ],
+      [
+        1224,
+        1601
+      ],
+      [
+        1282,
+        1693
+      ],
+      [
+        1386,
+        1577
+      ],
+      [
+        1410,
+        1579
+      ],
+      [
+        1393,
+        1611
+      ],
+      [
+        1416,
+        1568
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 11789.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_008",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 8",
+    "pixel_coordinates": [
+      [
+        2021,
+        262
+      ],
+      [
+        2064,
+        360
+      ],
+      [
+        1953,
+        373
+      ],
+      [
+        1989,
+        410
+      ],
+      [
+        2028,
+        369
+      ],
+      [
+        2190,
+        384
+      ],
+      [
+        2236,
+        548
+      ],
+      [
+        2259,
+        464
+      ],
+      [
+        2200,
+        377
+      ],
+      [
+        2076,
+        350
+      ],
+      [
+        2074,
+        289
+      ],
+      [
+        2175,
+        246
+      ],
+      [
+        2021,
+        262
+      ]
+    ],
+    "geometry": [
+      [
+        2021,
+        262
+      ],
+      [
+        2064,
+        360
+      ],
+      [
+        1953,
+        373
+      ],
+      [
+        1989,
+        410
+      ],
+      [
+        2028,
+        369
+      ],
+      [
+        2190,
+        384
+      ],
+      [
+        2236,
+        548
+      ],
+      [
+        2259,
+        464
+      ],
+      [
+        2200,
+        377
+      ],
+      [
+        2076,
+        350
+      ],
+      [
+        2074,
+        289
+      ],
+      [
+        2175,
+        246
+      ],
+      [
+        2021,
+        262
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 13422.0,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_009",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 9",
+    "pixel_coordinates": [
+      [
+        2536,
+        1750
+      ],
+      [
+        2517,
+        1950
+      ],
+      [
+        2315,
+        2089
+      ],
+      [
+        2573,
+        1941
+      ],
+      [
+        2579,
+        1815
+      ],
+      [
+        2535,
+        1811
+      ],
+      [
+        2536,
+        1750
+      ]
+    ],
+    "geometry": [
+      [
+        2536,
+        1750
+      ],
+      [
+        2517,
+        1950
+      ],
+      [
+        2315,
+        2089
+      ],
+      [
+        2573,
+        1941
+      ],
+      [
+        2579,
+        1815
+      ],
+      [
+        2535,
+        1811
+      ],
+      [
+        2536,
+        1750
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 10057.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_010",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 10",
+    "pixel_coordinates": [
+      [
+        1540,
+        2284
+      ],
+      [
+        1568,
+        2343
+      ],
+      [
+        1717,
+        2343
+      ],
+      [
+        1639,
+        2239
+      ],
+      [
+        1638,
+        2264
+      ],
+      [
+        1658,
+        2272
+      ],
+      [
+        1644,
+        2294
+      ],
+      [
+        1540,
+        2284
+      ]
+    ],
+    "geometry": [
+      [
+        1540,
+        2284
+      ],
+      [
+        1568,
+        2343
+      ],
+      [
+        1717,
+        2343
+      ],
+      [
+        1639,
+        2239
+      ],
+      [
+        1638,
+        2264
+      ],
+      [
+        1658,
+        2272
+      ],
+      [
+        1644,
+        2294
+      ],
+      [
+        1540,
+        2284
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 8277.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_011",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 11",
+    "pixel_coordinates": [
+      [
+        1663,
+        1523
+      ],
+      [
+        1720,
+        1608
+      ],
+      [
+        1841,
+        1531
+      ],
+      [
+        1703,
+        1537
+      ],
+      [
+        1683,
+        1504
+      ],
+      [
+        1663,
+        1523
+      ]
+    ],
+    "geometry": [
+      [
+        1663,
+        1523
+      ],
+      [
+        1720,
+        1608
+      ],
+      [
+        1841,
+        1531
+      ],
+      [
+        1703,
+        1537
+      ],
+      [
+        1683,
+        1504
+      ],
+      [
+        1663,
+        1523
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 6771.0,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_012",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 12",
+    "pixel_coordinates": [
+      [
+        1599,
+        383
+      ],
+      [
+        1534,
+        402
+      ],
+      [
+        1491,
+        358
+      ],
+      [
+        1511,
+        306
+      ],
+      [
+        1476,
+        352
+      ],
+      [
+        1289,
+        428
+      ],
+      [
+        1443,
+        367
+      ],
+      [
+        1507,
+        398
+      ],
+      [
+        1568,
+        512
+      ],
+      [
+        1546,
+        422
+      ],
+      [
+        1599,
+        383
+      ]
+    ],
+    "geometry": [
+      [
+        1599,
+        383
+      ],
+      [
+        1534,
+        402
+      ],
+      [
+        1491,
+        358
+      ],
+      [
+        1511,
+        306
+      ],
+      [
+        1476,
+        352
+      ],
+      [
+        1289,
+        428
+      ],
+      [
+        1443,
+        367
+      ],
+      [
+        1507,
+        398
+      ],
+      [
+        1568,
+        512
+      ],
+      [
+        1546,
+        422
+      ],
+      [
+        1599,
+        383
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 4851.0,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_013",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 13",
+    "pixel_coordinates": [
+      [
+        2228,
+        571
+      ],
+      [
+        2259,
+        712
+      ],
+      [
+        2231,
+        722
+      ],
+      [
+        2236,
+        746
+      ],
+      [
+        2257,
+        733
+      ],
+      [
+        2271,
+        756
+      ],
+      [
+        2251,
+        624
+      ],
+      [
+        2272,
+        614
+      ],
+      [
+        2280,
+        647
+      ],
+      [
+        2333,
+        650
+      ],
+      [
+        2331,
+        603
+      ],
+      [
+        2268,
+        594
+      ],
+      [
+        2252,
+        614
+      ],
+      [
+        2228,
+        571
+      ]
+    ],
+    "geometry": [
+      [
+        2228,
+        571
+      ],
+      [
+        2259,
+        712
+      ],
+      [
+        2231,
+        722
+      ],
+      [
+        2236,
+        746
+      ],
+      [
+        2257,
+        733
+      ],
+      [
+        2271,
+        756
+      ],
+      [
+        2251,
+        624
+      ],
+      [
+        2272,
+        614
+      ],
+      [
+        2280,
+        647
+      ],
+      [
+        2333,
+        650
+      ],
+      [
+        2331,
+        603
+      ],
+      [
+        2268,
+        594
+      ],
+      [
+        2252,
+        614
+      ],
+      [
+        2228,
+        571
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 5204.0,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_014",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 14",
+    "pixel_coordinates": [
+      [
+        1769,
+        1455
+      ],
+      [
+        1793,
+        1463
+      ],
+      [
+        1807,
+        1503
+      ],
+      [
+        1840,
+        1485
+      ],
+      [
+        1850,
+        1520
+      ],
+      [
+        1868,
+        1507
+      ],
+      [
+        1876,
+        1535
+      ],
+      [
+        1896,
+        1527
+      ],
+      [
+        1822,
+        1422
+      ],
+      [
+        1769,
+        1455
+      ]
+    ],
+    "geometry": [
+      [
+        1769,
+        1455
+      ],
+      [
+        1793,
+        1463
+      ],
+      [
+        1807,
+        1503
+      ],
+      [
+        1840,
+        1485
+      ],
+      [
+        1850,
+        1520
+      ],
+      [
+        1868,
+        1507
+      ],
+      [
+        1876,
+        1535
+      ],
+      [
+        1896,
+        1527
+      ],
+      [
+        1822,
+        1422
+      ],
+      [
+        1769,
+        1455
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 4782.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_015",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 15",
+    "pixel_coordinates": [
+      [
+        1065,
+        1238
+      ],
+      [
+        926,
+        1239
+      ],
+      [
+        928,
+        1256
+      ],
+      [
+        961,
+        1257
+      ],
+      [
+        960,
+        1269
+      ],
+      [
+        926,
+        1270
+      ],
+      [
+        927,
+        1285
+      ],
+      [
+        977,
+        1274
+      ],
+      [
+        1065,
+        1281
+      ],
+      [
+        1065,
+        1238
+      ]
+    ],
+    "geometry": [
+      [
+        1065,
+        1238
+      ],
+      [
+        926,
+        1239
+      ],
+      [
+        928,
+        1256
+      ],
+      [
+        961,
+        1257
+      ],
+      [
+        960,
+        1269
+      ],
+      [
+        926,
+        1270
+      ],
+      [
+        927,
+        1285
+      ],
+      [
+        977,
+        1274
+      ],
+      [
+        1065,
+        1281
+      ],
+      [
+        1065,
+        1238
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 5054.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_016",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 16",
+    "pixel_coordinates": [
+      [
+        1191,
+        2157
+      ],
+      [
+        1166,
+        2165
+      ],
+      [
+        1148,
+        2158
+      ],
+      [
+        1153,
+        2176
+      ],
+      [
+        1142,
+        2160
+      ],
+      [
+        1126,
+        2160
+      ],
+      [
+        1142,
+        2243
+      ],
+      [
+        1199,
+        2245
+      ],
+      [
+        1183,
+        2218
+      ],
+      [
+        1191,
+        2157
+      ]
+    ],
+    "geometry": [
+      [
+        1191,
+        2157
+      ],
+      [
+        1166,
+        2165
+      ],
+      [
+        1148,
+        2158
+      ],
+      [
+        1153,
+        2176
+      ],
+      [
+        1142,
+        2160
+      ],
+      [
+        1126,
+        2160
+      ],
+      [
+        1142,
+        2243
+      ],
+      [
+        1199,
+        2245
+      ],
+      [
+        1183,
+        2218
+      ],
+      [
+        1191,
+        2157
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 4423.0,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_017",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 17",
+    "pixel_coordinates": [
+      [
+        2092,
+        65
+      ],
+      [
+        2052,
+        255
+      ],
+      [
+        2078,
+        203
+      ],
+      [
+        2158,
+        224
+      ],
+      [
+        2198,
+        268
+      ],
+      [
+        2168,
+        218
+      ],
+      [
+        2071,
+        192
+      ],
+      [
+        2095,
+        80
+      ],
+      [
+        2111,
+        111
+      ],
+      [
+        2092,
+        65
+      ]
+    ],
+    "geometry": [
+      [
+        2092,
+        65
+      ],
+      [
+        2052,
+        255
+      ],
+      [
+        2078,
+        203
+      ],
+      [
+        2158,
+        224
+      ],
+      [
+        2198,
+        268
+      ],
+      [
+        2168,
+        218
+      ],
+      [
+        2071,
+        192
+      ],
+      [
+        2095,
+        80
+      ],
+      [
+        2111,
+        111
+      ],
+      [
+        2092,
+        65
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 2419.0,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_018",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 18",
+    "pixel_coordinates": [
+      [
+        246,
+        1440
+      ],
+      [
+        261,
+        1485
+      ],
+      [
+        277,
+        1484
+      ],
+      [
+        277,
+        1469
+      ],
+      [
+        303,
+        1475
+      ],
+      [
+        306,
+        1487
+      ],
+      [
+        331,
+        1480
+      ],
+      [
+        331,
+        1448
+      ],
+      [
+        315,
+        1438
+      ],
+      [
+        315,
+        1424
+      ],
+      [
+        288,
+        1420
+      ],
+      [
+        279,
+        1434
+      ],
+      [
+        246,
+        1440
+      ]
+    ],
+    "geometry": [
+      [
+        246,
+        1440
+      ],
+      [
+        261,
+        1485
+      ],
+      [
+        277,
+        1484
+      ],
+      [
+        277,
+        1469
+      ],
+      [
+        303,
+        1475
+      ],
+      [
+        306,
+        1487
+      ],
+      [
+        331,
+        1480
+      ],
+      [
+        331,
+        1448
+      ],
+      [
+        315,
+        1438
+      ],
+      [
+        315,
+        1424
+      ],
+      [
+        288,
+        1420
+      ],
+      [
+        279,
+        1434
+      ],
+      [
+        246,
+        1440
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 3746.0,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_019",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 19",
+    "pixel_coordinates": [
+      [
+        1583,
+        1229
+      ],
+      [
+        1600,
+        1266
+      ],
+      [
+        1634,
+        1264
+      ],
+      [
+        1615,
+        1288
+      ],
+      [
+        1612,
+        1375
+      ],
+      [
+        1642,
+        1397
+      ],
+      [
+        1648,
+        1382
+      ],
+      [
+        1624,
+        1376
+      ],
+      [
+        1625,
+        1318
+      ],
+      [
+        1653,
+        1298
+      ],
+      [
+        1652,
+        1269
+      ],
+      [
+        1637,
+        1270
+      ],
+      [
+        1666,
+        1242
+      ],
+      [
+        1583,
+        1229
+      ]
+    ],
+    "geometry": [
+      [
+        1583,
+        1229
+      ],
+      [
+        1600,
+        1266
+      ],
+      [
+        1634,
+        1264
+      ],
+      [
+        1615,
+        1288
+      ],
+      [
+        1612,
+        1375
+      ],
+      [
+        1642,
+        1397
+      ],
+      [
+        1648,
+        1382
+      ],
+      [
+        1624,
+        1376
+      ],
+      [
+        1625,
+        1318
+      ],
+      [
+        1653,
+        1298
+      ],
+      [
+        1652,
+        1269
+      ],
+      [
+        1637,
+        1270
+      ],
+      [
+        1666,
+        1242
+      ],
+      [
+        1583,
+        1229
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 4322.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_020",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 20",
+    "pixel_coordinates": [
+      [
+        818,
+        1425
+      ],
+      [
+        886,
+        1523
+      ],
+      [
+        920,
+        1500
+      ],
+      [
+        863,
+        1420
+      ],
+      [
+        891,
+        1483
+      ],
+      [
+        860,
+        1477
+      ],
+      [
+        869,
+        1452
+      ],
+      [
+        854,
+        1432
+      ],
+      [
+        818,
+        1425
+      ]
+    ],
+    "geometry": [
+      [
+        818,
+        1425
+      ],
+      [
+        886,
+        1523
+      ],
+      [
+        920,
+        1500
+      ],
+      [
+        863,
+        1420
+      ],
+      [
+        891,
+        1483
+      ],
+      [
+        860,
+        1477
+      ],
+      [
+        869,
+        1452
+      ],
+      [
+        854,
+        1432
+      ],
+      [
+        818,
+        1425
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 3289.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_021",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 21",
+    "pixel_coordinates": [
+      [
+        468,
+        1433
+      ],
+      [
+        433,
+        1412
+      ],
+      [
+        428,
+        1434
+      ],
+      [
+        411,
+        1425
+      ],
+      [
+        389,
+        1431
+      ],
+      [
+        387,
+        1443
+      ],
+      [
+        368,
+        1428
+      ],
+      [
+        359,
+        1444
+      ],
+      [
+        378,
+        1465
+      ],
+      [
+        446,
+        1437
+      ],
+      [
+        451,
+        1451
+      ],
+      [
+        427,
+        1461
+      ],
+      [
+        444,
+        1467
+      ],
+      [
+        468,
+        1433
+      ]
+    ],
+    "geometry": [
+      [
+        468,
+        1433
+      ],
+      [
+        433,
+        1412
+      ],
+      [
+        428,
+        1434
+      ],
+      [
+        411,
+        1425
+      ],
+      [
+        389,
+        1431
+      ],
+      [
+        387,
+        1443
+      ],
+      [
+        368,
+        1428
+      ],
+      [
+        359,
+        1444
+      ],
+      [
+        378,
+        1465
+      ],
+      [
+        446,
+        1437
+      ],
+      [
+        451,
+        1451
+      ],
+      [
+        427,
+        1461
+      ],
+      [
+        444,
+        1467
+      ],
+      [
+        468,
+        1433
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 2575.0,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_022",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 22",
+    "pixel_coordinates": [
+      [
+        2308,
+        1424
+      ],
+      [
+        2311,
+        1527
+      ],
+      [
+        2319,
+        1532
+      ],
+      [
+        2319,
+        1520
+      ],
+      [
+        2335,
+        1515
+      ],
+      [
+        2335,
+        1484
+      ],
+      [
+        2319,
+        1480
+      ],
+      [
+        2335,
+        1479
+      ],
+      [
+        2334,
+        1423
+      ],
+      [
+        2308,
+        1424
+      ]
+    ],
+    "geometry": [
+      [
+        2308,
+        1424
+      ],
+      [
+        2311,
+        1527
+      ],
+      [
+        2319,
+        1532
+      ],
+      [
+        2319,
+        1520
+      ],
+      [
+        2335,
+        1515
+      ],
+      [
+        2335,
+        1484
+      ],
+      [
+        2319,
+        1480
+      ],
+      [
+        2335,
+        1479
+      ],
+      [
+        2334,
+        1423
+      ],
+      [
+        2308,
+        1424
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 2440.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_023",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 23",
+    "pixel_coordinates": [
+      [
+        1994,
+        545
+      ],
+      [
+        2002,
+        582
+      ],
+      [
+        2029,
+        585
+      ],
+      [
+        2199,
+        555
+      ],
+      [
+        2014,
+        573
+      ],
+      [
+        1994,
+        545
+      ]
+    ],
+    "geometry": [
+      [
+        1994,
+        545
+      ],
+      [
+        2002,
+        582
+      ],
+      [
+        2029,
+        585
+      ],
+      [
+        2199,
+        555
+      ],
+      [
+        2014,
+        573
+      ],
+      [
+        1994,
+        545
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 1642.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_024",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 24",
+    "pixel_coordinates": [
+      [
+        2821,
+        1116
+      ],
+      [
+        2785,
+        1116
+      ],
+      [
+        2783,
+        1126
+      ],
+      [
+        2767,
+        1132
+      ],
+      [
+        2720,
+        1126
+      ],
+      [
+        2710,
+        1151
+      ],
+      [
+        2720,
+        1153
+      ],
+      [
+        2720,
+        1167
+      ],
+      [
+        2734,
+        1167
+      ],
+      [
+        2736,
+        1155
+      ],
+      [
+        2766,
+        1155
+      ],
+      [
+        2768,
+        1139
+      ],
+      [
+        2815,
+        1135
+      ],
+      [
+        2821,
+        1116
+      ]
+    ],
+    "geometry": [
+      [
+        2821,
+        1116
+      ],
+      [
+        2785,
+        1116
+      ],
+      [
+        2783,
+        1126
+      ],
+      [
+        2767,
+        1132
+      ],
+      [
+        2720,
+        1126
+      ],
+      [
+        2710,
+        1151
+      ],
+      [
+        2720,
+        1153
+      ],
+      [
+        2720,
+        1167
+      ],
+      [
+        2734,
+        1167
+      ],
+      [
+        2736,
+        1155
+      ],
+      [
+        2766,
+        1155
+      ],
+      [
+        2768,
+        1139
+      ],
+      [
+        2815,
+        1135
+      ],
+      [
+        2821,
+        1116
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 2386.0,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_025",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 25",
+    "pixel_coordinates": [
+      [
+        1944,
+        723
+      ],
+      [
+        1938,
+        744
+      ],
+      [
+        1951,
+        740
+      ],
+      [
+        1964,
+        754
+      ],
+      [
+        1958,
+        821
+      ],
+      [
+        1981,
+        846
+      ],
+      [
+        1965,
+        804
+      ],
+      [
+        1983,
+        799
+      ],
+      [
+        1969,
+        775
+      ],
+      [
+        1975,
+        755
+      ],
+      [
+        1985,
+        760
+      ],
+      [
+        1989,
+        727
+      ],
+      [
+        1944,
+        723
+      ]
+    ],
+    "geometry": [
+      [
+        1944,
+        723
+      ],
+      [
+        1938,
+        744
+      ],
+      [
+        1951,
+        740
+      ],
+      [
+        1964,
+        754
+      ],
+      [
+        1958,
+        821
+      ],
+      [
+        1981,
+        846
+      ],
+      [
+        1965,
+        804
+      ],
+      [
+        1983,
+        799
+      ],
+      [
+        1969,
+        775
+      ],
+      [
+        1975,
+        755
+      ],
+      [
+        1985,
+        760
+      ],
+      [
+        1989,
+        727
+      ],
+      [
+        1944,
+        723
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 2124.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_026",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 26",
+    "pixel_coordinates": [
+      [
+        2274,
+        108
+      ],
+      [
+        2335,
+        112
+      ],
+      [
+        2383,
+        65
+      ],
+      [
+        2356,
+        65
+      ],
+      [
+        2344,
+        94
+      ],
+      [
+        2323,
+        107
+      ],
+      [
+        2296,
+        93
+      ],
+      [
+        2327,
+        65
+      ],
+      [
+        2284,
+        65
+      ],
+      [
+        2290,
+        88
+      ],
+      [
+        2274,
+        108
+      ]
+    ],
+    "geometry": [
+      [
+        2274,
+        108
+      ],
+      [
+        2335,
+        112
+      ],
+      [
+        2383,
+        65
+      ],
+      [
+        2356,
+        65
+      ],
+      [
+        2344,
+        94
+      ],
+      [
+        2323,
+        107
+      ],
+      [
+        2296,
+        93
+      ],
+      [
+        2327,
+        65
+      ],
+      [
+        2284,
+        65
+      ],
+      [
+        2290,
+        88
+      ],
+      [
+        2274,
+        108
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 1983.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_027",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 27",
+    "pixel_coordinates": [
+      [
+        1881.0,
+        408.0
+      ],
+      [
+        1866.0,
+        438.0
+      ],
+      [
+        1893.9310344827586,
+        441.7241379310345
+      ],
+      [
+        1891.0,
+        430.0
+      ],
+      [
+        1919.0,
+        443.0
+      ],
+      [
+        1897.0,
+        419.0
+      ],
+      [
+        1885.0,
+        373.0
+      ],
+      [
+        1864.0,
+        379.0
+      ],
+      [
+        1881.0,
+        408.0
+      ]
+    ],
+    "geometry": [
+      [
+        1881.0,
+        408.0
+      ],
+      [
+        1866.0,
+        438.0
+      ],
+      [
+        1893.9310344827586,
+        441.7241379310345
+      ],
+      [
+        1891.0,
+        430.0
+      ],
+      [
+        1919.0,
+        443.0
+      ],
+      [
+        1897.0,
+        419.0
+      ],
+      [
+        1885.0,
+        373.0
+      ],
+      [
+        1864.0,
+        379.0
+      ],
+      [
+        1881.0,
+        408.0
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 1444.78,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_028",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 28",
+    "pixel_coordinates": [
+      [
+        574,
+        1139
+      ],
+      [
+        568,
+        1128
+      ],
+      [
+        525,
+        1132
+      ],
+      [
+        444,
+        1154
+      ],
+      [
+        459,
+        1166
+      ],
+      [
+        574,
+        1139
+      ]
+    ],
+    "geometry": [
+      [
+        574,
+        1139
+      ],
+      [
+        568,
+        1128
+      ],
+      [
+        525,
+        1132
+      ],
+      [
+        444,
+        1154
+      ],
+      [
+        459,
+        1166
+      ],
+      [
+        574,
+        1139
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 1963.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_029",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 29",
+    "pixel_coordinates": [
+      [
+        1409,
+        1496
+      ],
+      [
+        1409,
+        1515
+      ],
+      [
+        1474,
+        1522
+      ],
+      [
+        1408,
+        1535
+      ],
+      [
+        1480,
+        1531
+      ],
+      [
+        1484,
+        1545
+      ],
+      [
+        1488,
+        1516
+      ],
+      [
+        1497,
+        1531
+      ],
+      [
+        1496,
+        1506
+      ],
+      [
+        1440,
+        1508
+      ],
+      [
+        1433,
+        1479
+      ],
+      [
+        1425,
+        1496
+      ],
+      [
+        1409,
+        1496
+      ]
+    ],
+    "geometry": [
+      [
+        1409,
+        1496
+      ],
+      [
+        1409,
+        1515
+      ],
+      [
+        1474,
+        1522
+      ],
+      [
+        1408,
+        1535
+      ],
+      [
+        1480,
+        1531
+      ],
+      [
+        1484,
+        1545
+      ],
+      [
+        1488,
+        1516
+      ],
+      [
+        1497,
+        1531
+      ],
+      [
+        1496,
+        1506
+      ],
+      [
+        1440,
+        1508
+      ],
+      [
+        1433,
+        1479
+      ],
+      [
+        1425,
+        1496
+      ],
+      [
+        1409,
+        1496
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 1982.0,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_030",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 30",
+    "pixel_coordinates": [
+      [
+        1571,
+        1077
+      ],
+      [
+        1591,
+        1119
+      ],
+      [
+        1605,
+        1114
+      ],
+      [
+        1613,
+        1134
+      ],
+      [
+        1642,
+        1118
+      ],
+      [
+        1636,
+        1110
+      ],
+      [
+        1625,
+        1111
+      ],
+      [
+        1610,
+        1078
+      ],
+      [
+        1571,
+        1077
+      ]
+    ],
+    "geometry": [
+      [
+        1571,
+        1077
+      ],
+      [
+        1591,
+        1119
+      ],
+      [
+        1605,
+        1114
+      ],
+      [
+        1613,
+        1134
+      ],
+      [
+        1642,
+        1118
+      ],
+      [
+        1636,
+        1110
+      ],
+      [
+        1625,
+        1111
+      ],
+      [
+        1610,
+        1078
+      ],
+      [
+        1571,
+        1077
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 1897.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_031",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 31",
+    "pixel_coordinates": [
+      [
+        1667,
+        1106
+      ],
+      [
+        1686,
+        1156
+      ],
+      [
+        1723,
+        1142
+      ],
+      [
+        1711,
+        1109
+      ],
+      [
+        1667,
+        1106
+      ]
+    ],
+    "geometry": [
+      [
+        1667,
+        1106
+      ],
+      [
+        1686,
+        1156
+      ],
+      [
+        1723,
+        1142
+      ],
+      [
+        1711,
+        1109
+      ],
+      [
+        1667,
+        1106
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 1766.0,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_032",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 32",
+    "pixel_coordinates": [
+      [
+        2041,
+        759
+      ],
+      [
+        2051,
+        806
+      ],
+      [
+        2071,
+        808
+      ],
+      [
+        2072,
+        821
+      ],
+      [
+        2058,
+        838
+      ],
+      [
+        2079,
+        847
+      ],
+      [
+        2084,
+        831
+      ],
+      [
+        2071,
+        804
+      ],
+      [
+        2067,
+        758
+      ],
+      [
+        2041,
+        759
+      ]
+    ],
+    "geometry": [
+      [
+        2041,
+        759
+      ],
+      [
+        2051,
+        806
+      ],
+      [
+        2071,
+        808
+      ],
+      [
+        2072,
+        821
+      ],
+      [
+        2058,
+        838
+      ],
+      [
+        2079,
+        847
+      ],
+      [
+        2084,
+        831
+      ],
+      [
+        2071,
+        804
+      ],
+      [
+        2067,
+        758
+      ],
+      [
+        2041,
+        759
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 1581.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_033",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 33",
+    "pixel_coordinates": [
+      [
+        961,
+        1649
+      ],
+      [
+        948,
+        1646
+      ],
+      [
+        942,
+        1656
+      ],
+      [
+        928,
+        1660
+      ],
+      [
+        928,
+        1695
+      ],
+      [
+        920,
+        1708
+      ],
+      [
+        976,
+        1674
+      ],
+      [
+        961,
+        1649
+      ]
+    ],
+    "geometry": [
+      [
+        961,
+        1649
+      ],
+      [
+        948,
+        1646
+      ],
+      [
+        942,
+        1656
+      ],
+      [
+        928,
+        1660
+      ],
+      [
+        928,
+        1695
+      ],
+      [
+        920,
+        1708
+      ],
+      [
+        976,
+        1674
+      ],
+      [
+        961,
+        1649
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 1626.0,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_034",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 34",
+    "pixel_coordinates": [
+      [
+        1583,
+        968
+      ],
+      [
+        1549,
+        969
+      ],
+      [
+        1548,
+        1031
+      ],
+      [
+        1554,
+        1019
+      ],
+      [
+        1564,
+        1014
+      ],
+      [
+        1584,
+        1021
+      ],
+      [
+        1583,
+        968
+      ]
+    ],
+    "geometry": [
+      [
+        1583,
+        968
+      ],
+      [
+        1549,
+        969
+      ],
+      [
+        1548,
+        1031
+      ],
+      [
+        1554,
+        1019
+      ],
+      [
+        1564,
+        1014
+      ],
+      [
+        1584,
+        1021
+      ],
+      [
+        1583,
+        968
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 1741.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_035",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 35",
+    "pixel_coordinates": [
+      [
+        1846,
+        1544
+      ],
+      [
+        1782,
+        1591
+      ],
+      [
+        1761,
+        1594
+      ],
+      [
+        1737,
+        1629
+      ],
+      [
+        1824,
+        1567
+      ],
+      [
+        1839,
+        1567
+      ],
+      [
+        1846,
+        1544
+      ]
+    ],
+    "geometry": [
+      [
+        1846,
+        1544
+      ],
+      [
+        1782,
+        1591
+      ],
+      [
+        1761,
+        1594
+      ],
+      [
+        1737,
+        1629
+      ],
+      [
+        1824,
+        1567
+      ],
+      [
+        1839,
+        1567
+      ],
+      [
+        1846,
+        1544
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 981.0,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_036",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 36",
+    "pixel_coordinates": [
+      [
+        1608,
+        1303
+      ],
+      [
+        1595,
+        1317
+      ],
+      [
+        1591,
+        1420
+      ],
+      [
+        1598,
+        1427
+      ],
+      [
+        1608,
+        1407
+      ],
+      [
+        1608,
+        1303
+      ]
+    ],
+    "geometry": [
+      [
+        1608,
+        1303
+      ],
+      [
+        1595,
+        1317
+      ],
+      [
+        1591,
+        1420
+      ],
+      [
+        1598,
+        1427
+      ],
+      [
+        1608,
+        1407
+      ],
+      [
+        1608,
+        1303
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 1630.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_037",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 37",
+    "pixel_coordinates": [
+      [
+        2960,
+        1904
+      ],
+      [
+        2962,
+        1946
+      ],
+      [
+        2991,
+        1959
+      ],
+      [
+        2993,
+        1930
+      ],
+      [
+        2985,
+        1904
+      ],
+      [
+        2960,
+        1904
+      ]
+    ],
+    "geometry": [
+      [
+        2960,
+        1904
+      ],
+      [
+        2962,
+        1946
+      ],
+      [
+        2991,
+        1959
+      ],
+      [
+        2993,
+        1930
+      ],
+      [
+        2985,
+        1904
+      ],
+      [
+        2960,
+        1904
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 1425.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_038",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 38",
+    "pixel_coordinates": [
+      [
+        1569,
+        2005
+      ],
+      [
+        1554,
+        1987
+      ],
+      [
+        1524,
+        2001
+      ],
+      [
+        1509,
+        2019
+      ],
+      [
+        1521,
+        2016
+      ],
+      [
+        1528,
+        2024
+      ],
+      [
+        1527,
+        2035
+      ],
+      [
+        1533,
+        2036
+      ],
+      [
+        1559,
+        2017
+      ],
+      [
+        1560,
+        2006
+      ],
+      [
+        1567,
+        2010
+      ],
+      [
+        1569,
+        2005
+      ]
+    ],
+    "geometry": [
+      [
+        1569,
+        2005
+      ],
+      [
+        1554,
+        1987
+      ],
+      [
+        1524,
+        2001
+      ],
+      [
+        1509,
+        2019
+      ],
+      [
+        1521,
+        2016
+      ],
+      [
+        1528,
+        2024
+      ],
+      [
+        1527,
+        2035
+      ],
+      [
+        1533,
+        2036
+      ],
+      [
+        1559,
+        2017
+      ],
+      [
+        1560,
+        2006
+      ],
+      [
+        1567,
+        2010
+      ],
+      [
+        1569,
+        2005
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 1395.0,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_039",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 39",
+    "pixel_coordinates": [
+      [
+        2100,
+        789
+      ],
+      [
+        2105,
+        830
+      ],
+      [
+        2093,
+        833
+      ],
+      [
+        2096,
+        847
+      ],
+      [
+        2110,
+        847
+      ],
+      [
+        2118,
+        840
+      ],
+      [
+        2119,
+        847
+      ],
+      [
+        2133,
+        847
+      ],
+      [
+        2121,
+        795
+      ],
+      [
+        2105,
+        800
+      ],
+      [
+        2100,
+        789
+      ]
+    ],
+    "geometry": [
+      [
+        2100,
+        789
+      ],
+      [
+        2105,
+        830
+      ],
+      [
+        2093,
+        833
+      ],
+      [
+        2096,
+        847
+      ],
+      [
+        2110,
+        847
+      ],
+      [
+        2118,
+        840
+      ],
+      [
+        2119,
+        847
+      ],
+      [
+        2133,
+        847
+      ],
+      [
+        2121,
+        795
+      ],
+      [
+        2105,
+        800
+      ],
+      [
+        2100,
+        789
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 1312.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_040",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 40",
+    "pixel_coordinates": [
+      [
+        1824,
+        576
+      ],
+      [
+        1836,
+        604
+      ],
+      [
+        1919,
+        602
+      ],
+      [
+        1903,
+        587
+      ],
+      [
+        1840,
+        589
+      ],
+      [
+        1833,
+        576
+      ],
+      [
+        1824,
+        576
+      ]
+    ],
+    "geometry": [
+      [
+        1824,
+        576
+      ],
+      [
+        1836,
+        604
+      ],
+      [
+        1919,
+        602
+      ],
+      [
+        1903,
+        587
+      ],
+      [
+        1840,
+        589
+      ],
+      [
+        1833,
+        576
+      ],
+      [
+        1824,
+        576
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 1311.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_041",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 41",
+    "pixel_coordinates": [
+      [
+        1407,
+        949
+      ],
+      [
+        1406,
+        913
+      ],
+      [
+        1327,
+        913
+      ],
+      [
+        1333,
+        939
+      ],
+      [
+        1338,
+        923
+      ],
+      [
+        1375,
+        922
+      ],
+      [
+        1392,
+        928
+      ],
+      [
+        1393,
+        949
+      ],
+      [
+        1407,
+        949
+      ]
+    ],
+    "geometry": [
+      [
+        1407,
+        949
+      ],
+      [
+        1406,
+        913
+      ],
+      [
+        1327,
+        913
+      ],
+      [
+        1333,
+        939
+      ],
+      [
+        1338,
+        923
+      ],
+      [
+        1375,
+        922
+      ],
+      [
+        1392,
+        928
+      ],
+      [
+        1393,
+        949
+      ],
+      [
+        1407,
+        949
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 1235.0,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_042",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 42",
+    "pixel_coordinates": [
+      [
+        1717,
+        1754
+      ],
+      [
+        1650,
+        1803
+      ],
+      [
+        1658,
+        1826
+      ],
+      [
+        1683,
+        1803
+      ],
+      [
+        1688,
+        1788
+      ],
+      [
+        1723,
+        1766
+      ],
+      [
+        1717,
+        1754
+      ]
+    ],
+    "geometry": [
+      [
+        1717,
+        1754
+      ],
+      [
+        1650,
+        1803
+      ],
+      [
+        1658,
+        1826
+      ],
+      [
+        1683,
+        1803
+      ],
+      [
+        1688,
+        1788
+      ],
+      [
+        1723,
+        1766
+      ],
+      [
+        1717,
+        1754
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 1331.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_043",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 43",
+    "pixel_coordinates": [
+      [
+        1854,
+        559
+      ],
+      [
+        1856,
+        580
+      ],
+      [
+        1919,
+        583
+      ],
+      [
+        1922,
+        559
+      ],
+      [
+        1876,
+        559
+      ],
+      [
+        1874,
+        568
+      ],
+      [
+        1867,
+        560
+      ],
+      [
+        1863,
+        576
+      ],
+      [
+        1860,
+        559
+      ],
+      [
+        1854,
+        559
+      ]
+    ],
+    "geometry": [
+      [
+        1854,
+        559
+      ],
+      [
+        1856,
+        580
+      ],
+      [
+        1919,
+        583
+      ],
+      [
+        1922,
+        559
+      ],
+      [
+        1876,
+        559
+      ],
+      [
+        1874,
+        568
+      ],
+      [
+        1867,
+        560
+      ],
+      [
+        1863,
+        576
+      ],
+      [
+        1860,
+        559
+      ],
+      [
+        1854,
+        559
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 1369.0,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_044",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 44",
+    "pixel_coordinates": [
+      [
+        2595,
+        1456
+      ],
+      [
+        2589,
+        1606
+      ],
+      [
+        2598,
+        1616
+      ],
+      [
+        2602,
+        1457
+      ],
+      [
+        2595,
+        1456
+      ]
+    ],
+    "geometry": [
+      [
+        2595,
+        1456
+      ],
+      [
+        2589,
+        1606
+      ],
+      [
+        2598,
+        1616
+      ],
+      [
+        2602,
+        1457
+      ],
+      [
+        2595,
+        1456
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 1263.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_045",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 45",
+    "pixel_coordinates": [
+      [
+        627,
+        1684
+      ],
+      [
+        623,
+        1693
+      ],
+      [
+        593,
+        1689
+      ],
+      [
+        569,
+        1696
+      ],
+      [
+        560,
+        1690
+      ],
+      [
+        547,
+        1700
+      ],
+      [
+        577,
+        1704
+      ],
+      [
+        570,
+        1717
+      ],
+      [
+        603,
+        1715
+      ],
+      [
+        608,
+        1702
+      ],
+      [
+        627,
+        1697
+      ],
+      [
+        627,
+        1684
+      ]
+    ],
+    "geometry": [
+      [
+        627,
+        1684
+      ],
+      [
+        623,
+        1693
+      ],
+      [
+        593,
+        1689
+      ],
+      [
+        569,
+        1696
+      ],
+      [
+        560,
+        1690
+      ],
+      [
+        547,
+        1700
+      ],
+      [
+        577,
+        1704
+      ],
+      [
+        570,
+        1717
+      ],
+      [
+        603,
+        1715
+      ],
+      [
+        608,
+        1702
+      ],
+      [
+        627,
+        1697
+      ],
+      [
+        627,
+        1684
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 1171.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_046",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 46",
+    "pixel_coordinates": [
+      [
+        2524,
+        142
+      ],
+      [
+        2555,
+        143
+      ],
+      [
+        2556,
+        159
+      ],
+      [
+        2563,
+        158
+      ],
+      [
+        2558,
+        145
+      ],
+      [
+        2568,
+        135
+      ],
+      [
+        2590,
+        137
+      ],
+      [
+        2609,
+        124
+      ],
+      [
+        2587,
+        112
+      ],
+      [
+        2560,
+        134
+      ],
+      [
+        2547,
+        127
+      ],
+      [
+        2549,
+        107
+      ],
+      [
+        2544,
+        131
+      ],
+      [
+        2528,
+        132
+      ],
+      [
+        2524,
+        142
+      ]
+    ],
+    "geometry": [
+      [
+        2524,
+        142
+      ],
+      [
+        2555,
+        143
+      ],
+      [
+        2556,
+        159
+      ],
+      [
+        2563,
+        158
+      ],
+      [
+        2558,
+        145
+      ],
+      [
+        2568,
+        135
+      ],
+      [
+        2590,
+        137
+      ],
+      [
+        2609,
+        124
+      ],
+      [
+        2587,
+        112
+      ],
+      [
+        2560,
+        134
+      ],
+      [
+        2547,
+        127
+      ],
+      [
+        2549,
+        107
+      ],
+      [
+        2544,
+        131
+      ],
+      [
+        2528,
+        132
+      ],
+      [
+        2524,
+        142
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 1165.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_047",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 47",
+    "pixel_coordinates": [
+      [
+        2037,
+        764
+      ],
+      [
+        2016,
+        768
+      ],
+      [
+        2016,
+        798
+      ],
+      [
+        2026,
+        806
+      ],
+      [
+        2029,
+        830
+      ],
+      [
+        2035,
+        822
+      ],
+      [
+        2031,
+        800
+      ],
+      [
+        2038,
+        800
+      ],
+      [
+        2035,
+        815
+      ],
+      [
+        2039,
+        807
+      ],
+      [
+        2047,
+        807
+      ],
+      [
+        2037,
+        764
+      ]
+    ],
+    "geometry": [
+      [
+        2037,
+        764
+      ],
+      [
+        2016,
+        768
+      ],
+      [
+        2016,
+        798
+      ],
+      [
+        2026,
+        806
+      ],
+      [
+        2029,
+        830
+      ],
+      [
+        2035,
+        822
+      ],
+      [
+        2031,
+        800
+      ],
+      [
+        2038,
+        800
+      ],
+      [
+        2035,
+        815
+      ],
+      [
+        2039,
+        807
+      ],
+      [
+        2047,
+        807
+      ],
+      [
+        2037,
+        764
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 1122.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_048",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 48",
+    "pixel_coordinates": [
+      [
+        2346,
+        709
+      ],
+      [
+        2340,
+        670
+      ],
+      [
+        2319,
+        691
+      ],
+      [
+        2274,
+        692
+      ],
+      [
+        2274,
+        699
+      ],
+      [
+        2304,
+        696
+      ],
+      [
+        2308,
+        702
+      ],
+      [
+        2297,
+        710
+      ],
+      [
+        2310,
+        708
+      ],
+      [
+        2320,
+        691
+      ],
+      [
+        2328,
+        713
+      ],
+      [
+        2346,
+        709
+      ]
+    ],
+    "geometry": [
+      [
+        2346,
+        709
+      ],
+      [
+        2340,
+        670
+      ],
+      [
+        2319,
+        691
+      ],
+      [
+        2274,
+        692
+      ],
+      [
+        2274,
+        699
+      ],
+      [
+        2304,
+        696
+      ],
+      [
+        2308,
+        702
+      ],
+      [
+        2297,
+        710
+      ],
+      [
+        2310,
+        708
+      ],
+      [
+        2320,
+        691
+      ],
+      [
+        2328,
+        713
+      ],
+      [
+        2346,
+        709
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 1036.0,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_049",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 49",
+    "pixel_coordinates": [
+      [
+        841,
+        1109
+      ],
+      [
+        840,
+        1143
+      ],
+      [
+        813,
+        1143
+      ],
+      [
+        816,
+        1175
+      ],
+      [
+        843,
+        1172
+      ],
+      [
+        841,
+        1109
+      ]
+    ],
+    "geometry": [
+      [
+        841,
+        1109
+      ],
+      [
+        840,
+        1143
+      ],
+      [
+        813,
+        1143
+      ],
+      [
+        816,
+        1175
+      ],
+      [
+        843,
+        1172
+      ],
+      [
+        841,
+        1109
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 893.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_050",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 50",
+    "pixel_coordinates": [
+      [
+        2431,
+        1260
+      ],
+      [
+        2433,
+        1271
+      ],
+      [
+        2476,
+        1270
+      ],
+      [
+        2480,
+        1287
+      ],
+      [
+        2501,
+        1283
+      ],
+      [
+        2488,
+        1274
+      ],
+      [
+        2500,
+        1269
+      ],
+      [
+        2500,
+        1261
+      ],
+      [
+        2431,
+        1260
+      ]
+    ],
+    "geometry": [
+      [
+        2431,
+        1260
+      ],
+      [
+        2433,
+        1271
+      ],
+      [
+        2476,
+        1270
+      ],
+      [
+        2480,
+        1287
+      ],
+      [
+        2501,
+        1283
+      ],
+      [
+        2488,
+        1274
+      ],
+      [
+        2500,
+        1269
+      ],
+      [
+        2500,
+        1261
+      ],
+      [
+        2431,
+        1260
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 924.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_051",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 51",
+    "pixel_coordinates": [
+      [
+        1887,
+        732
+      ],
+      [
+        1882,
+        762
+      ],
+      [
+        1899,
+        769
+      ],
+      [
+        1894,
+        788
+      ],
+      [
+        1901,
+        788
+      ],
+      [
+        1908,
+        783
+      ],
+      [
+        1913,
+        746
+      ],
+      [
+        1887,
+        732
+      ]
+    ],
+    "geometry": [
+      [
+        1887,
+        732
+      ],
+      [
+        1882,
+        762
+      ],
+      [
+        1899,
+        769
+      ],
+      [
+        1894,
+        788
+      ],
+      [
+        1901,
+        788
+      ],
+      [
+        1908,
+        783
+      ],
+      [
+        1913,
+        746
+      ],
+      [
+        1887,
+        732
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 1009.0,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_052",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 52",
+    "pixel_coordinates": [
+      [
+        1982,
+        1846
+      ],
+      [
+        1976,
+        1852
+      ],
+      [
+        1988,
+        1881
+      ],
+      [
+        1991,
+        1877
+      ],
+      [
+        1997,
+        1881
+      ],
+      [
+        2001,
+        1909
+      ],
+      [
+        2022,
+        1894
+      ],
+      [
+        2002,
+        1876
+      ],
+      [
+        1996,
+        1861
+      ],
+      [
+        1990,
+        1861
+      ],
+      [
+        1990,
+        1850
+      ],
+      [
+        1982,
+        1846
+      ]
+    ],
+    "geometry": [
+      [
+        1982,
+        1846
+      ],
+      [
+        1976,
+        1852
+      ],
+      [
+        1988,
+        1881
+      ],
+      [
+        1991,
+        1877
+      ],
+      [
+        1997,
+        1881
+      ],
+      [
+        2001,
+        1909
+      ],
+      [
+        2022,
+        1894
+      ],
+      [
+        2002,
+        1876
+      ],
+      [
+        1996,
+        1861
+      ],
+      [
+        1990,
+        1861
+      ],
+      [
+        1990,
+        1850
+      ],
+      [
+        1982,
+        1846
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 865.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_053",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 53",
+    "pixel_coordinates": [
+      [
+        1487,
+        905
+      ],
+      [
+        1442,
+        906
+      ],
+      [
+        1444,
+        920
+      ],
+      [
+        1453,
+        925
+      ],
+      [
+        1458,
+        919
+      ],
+      [
+        1462,
+        923
+      ],
+      [
+        1472,
+        921
+      ],
+      [
+        1478,
+        943
+      ],
+      [
+        1483,
+        943
+      ],
+      [
+        1487,
+        905
+      ]
+    ],
+    "geometry": [
+      [
+        1487,
+        905
+      ],
+      [
+        1442,
+        906
+      ],
+      [
+        1444,
+        920
+      ],
+      [
+        1453,
+        925
+      ],
+      [
+        1458,
+        919
+      ],
+      [
+        1462,
+        923
+      ],
+      [
+        1472,
+        921
+      ],
+      [
+        1478,
+        943
+      ],
+      [
+        1483,
+        943
+      ],
+      [
+        1487,
+        905
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 898.0,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_054",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 54",
+    "pixel_coordinates": [
+      [
+        1952,
+        72
+      ],
+      [
+        1956,
+        95
+      ],
+      [
+        1967,
+        95
+      ],
+      [
+        1968,
+        100
+      ],
+      [
+        1983,
+        87
+      ],
+      [
+        1984,
+        79
+      ],
+      [
+        1994,
+        87
+      ],
+      [
+        2007,
+        82
+      ],
+      [
+        1994,
+        84
+      ],
+      [
+        1990,
+        65
+      ],
+      [
+        1987,
+        72
+      ],
+      [
+        1982,
+        65
+      ],
+      [
+        1960,
+        65
+      ],
+      [
+        1959,
+        72
+      ],
+      [
+        1958,
+        67
+      ],
+      [
+        1952,
+        72
+      ]
+    ],
+    "geometry": [
+      [
+        1952,
+        72
+      ],
+      [
+        1956,
+        95
+      ],
+      [
+        1967,
+        95
+      ],
+      [
+        1968,
+        100
+      ],
+      [
+        1983,
+        87
+      ],
+      [
+        1984,
+        79
+      ],
+      [
+        1994,
+        87
+      ],
+      [
+        2007,
+        82
+      ],
+      [
+        1994,
+        84
+      ],
+      [
+        1990,
+        65
+      ],
+      [
+        1987,
+        72
+      ],
+      [
+        1982,
+        65
+      ],
+      [
+        1960,
+        65
+      ],
+      [
+        1959,
+        72
+      ],
+      [
+        1958,
+        67
+      ],
+      [
+        1952,
+        72
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 980.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_055",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 55",
+    "pixel_coordinates": [
+      [
+        2746,
+        1696
+      ],
+      [
+        2744,
+        1705
+      ],
+      [
+        2750,
+        1706
+      ],
+      [
+        2752,
+        1726
+      ],
+      [
+        2770,
+        1721
+      ],
+      [
+        2782,
+        1728
+      ],
+      [
+        2785,
+        1742
+      ],
+      [
+        2788,
+        1737
+      ],
+      [
+        2793,
+        1742
+      ],
+      [
+        2793,
+        1728
+      ],
+      [
+        2783,
+        1726
+      ],
+      [
+        2782,
+        1702
+      ],
+      [
+        2753,
+        1702
+      ],
+      [
+        2746,
+        1696
+      ]
+    ],
+    "geometry": [
+      [
+        2746,
+        1696
+      ],
+      [
+        2744,
+        1705
+      ],
+      [
+        2750,
+        1706
+      ],
+      [
+        2752,
+        1726
+      ],
+      [
+        2770,
+        1721
+      ],
+      [
+        2782,
+        1728
+      ],
+      [
+        2785,
+        1742
+      ],
+      [
+        2788,
+        1737
+      ],
+      [
+        2793,
+        1742
+      ],
+      [
+        2793,
+        1728
+      ],
+      [
+        2783,
+        1726
+      ],
+      [
+        2782,
+        1702
+      ],
+      [
+        2753,
+        1702
+      ],
+      [
+        2746,
+        1696
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 867.0,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_056",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 56",
+    "pixel_coordinates": [
+      [
+        2474,
+        81
+      ],
+      [
+        2476,
+        110
+      ],
+      [
+        2458,
+        120
+      ],
+      [
+        2464,
+        143
+      ],
+      [
+        2481,
+        117
+      ],
+      [
+        2502,
+        128
+      ],
+      [
+        2498,
+        143
+      ],
+      [
+        2510,
+        128
+      ],
+      [
+        2523,
+        131
+      ],
+      [
+        2512,
+        127
+      ],
+      [
+        2511,
+        112
+      ],
+      [
+        2478,
+        110
+      ],
+      [
+        2480,
+        99
+      ],
+      [
+        2495,
+        94
+      ],
+      [
+        2481,
+        96
+      ],
+      [
+        2474,
+        81
+      ]
+    ],
+    "geometry": [
+      [
+        2474,
+        81
+      ],
+      [
+        2476,
+        110
+      ],
+      [
+        2458,
+        120
+      ],
+      [
+        2464,
+        143
+      ],
+      [
+        2481,
+        117
+      ],
+      [
+        2502,
+        128
+      ],
+      [
+        2498,
+        143
+      ],
+      [
+        2510,
+        128
+      ],
+      [
+        2523,
+        131
+      ],
+      [
+        2512,
+        127
+      ],
+      [
+        2511,
+        112
+      ],
+      [
+        2478,
+        110
+      ],
+      [
+        2480,
+        99
+      ],
+      [
+        2495,
+        94
+      ],
+      [
+        2481,
+        96
+      ],
+      [
+        2474,
+        81
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 965.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_057",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 57",
+    "pixel_coordinates": [
+      [
+        2997,
+        1978
+      ],
+      [
+        2991,
+        1992
+      ],
+      [
+        2980,
+        1992
+      ],
+      [
+        2976,
+        2047
+      ],
+      [
+        2991,
+        2047
+      ],
+      [
+        2991,
+        2032
+      ],
+      [
+        3006,
+        2027
+      ],
+      [
+        3006,
+        2022
+      ],
+      [
+        2989,
+        2024
+      ],
+      [
+        2986,
+        2015
+      ],
+      [
+        2991,
+        1996
+      ],
+      [
+        3004,
+        1991
+      ],
+      [
+        2997,
+        1978
+      ]
+    ],
+    "geometry": [
+      [
+        2997,
+        1978
+      ],
+      [
+        2991,
+        1992
+      ],
+      [
+        2980,
+        1992
+      ],
+      [
+        2976,
+        2047
+      ],
+      [
+        2991,
+        2047
+      ],
+      [
+        2991,
+        2032
+      ],
+      [
+        3006,
+        2027
+      ],
+      [
+        3006,
+        2022
+      ],
+      [
+        2989,
+        2024
+      ],
+      [
+        2986,
+        2015
+      ],
+      [
+        2991,
+        1996
+      ],
+      [
+        3004,
+        1991
+      ],
+      [
+        2997,
+        1978
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 849.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_058",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 58",
+    "pixel_coordinates": [
+      [
+        2895.0,
+        2095.0
+      ],
+      [
+        2896.0,
+        2100.0
+      ],
+      [
+        2907.0,
+        2094.0
+      ],
+      [
+        2923.0,
+        2099.0
+      ],
+      [
+        2943.0,
+        2095.0
+      ],
+      [
+        2943.0,
+        2090.0
+      ],
+      [
+        2935.0,
+        2089.0
+      ],
+      [
+        2943.0,
+        2087.0
+      ],
+      [
+        2943.0,
+        2080.0
+      ],
+      [
+        2930.0,
+        2080.0
+      ],
+      [
+        2929.0,
+        2088.0
+      ],
+      [
+        2906.1284916201116,
+        2080.04469273743
+      ],
+      [
+        2903.0,
+        2082.0
+      ],
+      [
+        2880.0,
+        2080.0
+      ],
+      [
+        2880.0,
+        2095.0
+      ],
+      [
+        2895.0,
+        2095.0
+      ]
+    ],
+    "geometry": [
+      [
+        2895.0,
+        2095.0
+      ],
+      [
+        2896.0,
+        2100.0
+      ],
+      [
+        2907.0,
+        2094.0
+      ],
+      [
+        2923.0,
+        2099.0
+      ],
+      [
+        2943.0,
+        2095.0
+      ],
+      [
+        2943.0,
+        2090.0
+      ],
+      [
+        2935.0,
+        2089.0
+      ],
+      [
+        2943.0,
+        2087.0
+      ],
+      [
+        2943.0,
+        2080.0
+      ],
+      [
+        2930.0,
+        2080.0
+      ],
+      [
+        2929.0,
+        2088.0
+      ],
+      [
+        2906.1284916201116,
+        2080.04469273743
+      ],
+      [
+        2903.0,
+        2082.0
+      ],
+      [
+        2880.0,
+        2080.0
+      ],
+      [
+        2880.0,
+        2095.0
+      ],
+      [
+        2895.0,
+        2095.0
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 899.3,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_059",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 59",
+    "pixel_coordinates": [
+      [
+        1518,
+        2046
+      ],
+      [
+        1512,
+        2044
+      ],
+      [
+        1506,
+        2049
+      ],
+      [
+        1500,
+        2040
+      ],
+      [
+        1494,
+        2039
+      ],
+      [
+        1491,
+        2031
+      ],
+      [
+        1477,
+        2041
+      ],
+      [
+        1473,
+        2054
+      ],
+      [
+        1487,
+        2071
+      ],
+      [
+        1488,
+        2064
+      ],
+      [
+        1497,
+        2064
+      ],
+      [
+        1518,
+        2046
+      ]
+    ],
+    "geometry": [
+      [
+        1518,
+        2046
+      ],
+      [
+        1512,
+        2044
+      ],
+      [
+        1506,
+        2049
+      ],
+      [
+        1500,
+        2040
+      ],
+      [
+        1494,
+        2039
+      ],
+      [
+        1491,
+        2031
+      ],
+      [
+        1477,
+        2041
+      ],
+      [
+        1473,
+        2054
+      ],
+      [
+        1487,
+        2071
+      ],
+      [
+        1488,
+        2064
+      ],
+      [
+        1497,
+        2064
+      ],
+      [
+        1518,
+        2046
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 821.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_060",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 60",
+    "pixel_coordinates": [
+      [
+        2547.0,
+        191.0
+      ],
+      [
+        2547.0,
+        182.0
+      ],
+      [
+        2527.0,
+        185.0
+      ],
+      [
+        2528.0,
+        165.0
+      ],
+      [
+        2553.0,
+        174.45945945945945
+      ],
+      [
+        2553.0,
+        160.0
+      ],
+      [
+        2512.5514511873353,
+        153.90501319261213
+      ],
+      [
+        2523.0,
+        160.0
+      ],
+      [
+        2524.0,
+        191.0
+      ],
+      [
+        2547.0,
+        191.0
+      ]
+    ],
+    "geometry": [
+      [
+        2547.0,
+        191.0
+      ],
+      [
+        2547.0,
+        182.0
+      ],
+      [
+        2527.0,
+        185.0
+      ],
+      [
+        2528.0,
+        165.0
+      ],
+      [
+        2553.0,
+        174.45945945945945
+      ],
+      [
+        2553.0,
+        160.0
+      ],
+      [
+        2512.5514511873353,
+        153.90501319261213
+      ],
+      [
+        2523.0,
+        160.0
+      ],
+      [
+        2524.0,
+        191.0
+      ],
+      [
+        2547.0,
+        191.0
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 608.17,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_061",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 61",
+    "pixel_coordinates": [
+      [
+        1712,
+        358
+      ],
+      [
+        1696,
+        364
+      ],
+      [
+        1696,
+        383
+      ],
+      [
+        1700,
+        385
+      ],
+      [
+        1701,
+        399
+      ],
+      [
+        1707,
+        398
+      ],
+      [
+        1710,
+        391
+      ],
+      [
+        1726,
+        391
+      ],
+      [
+        1727,
+        383
+      ],
+      [
+        1718,
+        373
+      ],
+      [
+        1722,
+        363
+      ],
+      [
+        1712,
+        358
+      ]
+    ],
+    "geometry": [
+      [
+        1712,
+        358
+      ],
+      [
+        1696,
+        364
+      ],
+      [
+        1696,
+        383
+      ],
+      [
+        1700,
+        385
+      ],
+      [
+        1701,
+        399
+      ],
+      [
+        1707,
+        398
+      ],
+      [
+        1710,
+        391
+      ],
+      [
+        1726,
+        391
+      ],
+      [
+        1727,
+        383
+      ],
+      [
+        1718,
+        373
+      ],
+      [
+        1722,
+        363
+      ],
+      [
+        1712,
+        358
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 834.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_062",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 62",
+    "pixel_coordinates": [
+      [
+        2416,
+        1752
+      ],
+      [
+        2430,
+        1756
+      ],
+      [
+        2439,
+        1746
+      ],
+      [
+        2452,
+        1746
+      ],
+      [
+        2454,
+        1752
+      ],
+      [
+        2491,
+        1756
+      ],
+      [
+        2501,
+        1744
+      ],
+      [
+        2419,
+        1738
+      ],
+      [
+        2416,
+        1752
+      ]
+    ],
+    "geometry": [
+      [
+        2416,
+        1752
+      ],
+      [
+        2430,
+        1756
+      ],
+      [
+        2439,
+        1746
+      ],
+      [
+        2452,
+        1746
+      ],
+      [
+        2454,
+        1752
+      ],
+      [
+        2491,
+        1756
+      ],
+      [
+        2501,
+        1744
+      ],
+      [
+        2419,
+        1738
+      ],
+      [
+        2416,
+        1752
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 912.0,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_063",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 63",
+    "pixel_coordinates": [
+      [
+        2428,
+        65
+      ],
+      [
+        2428,
+        79
+      ],
+      [
+        2422,
+        80
+      ],
+      [
+        2428,
+        111
+      ],
+      [
+        2447,
+        115
+      ],
+      [
+        2462,
+        110
+      ],
+      [
+        2442,
+        112
+      ],
+      [
+        2441,
+        97
+      ],
+      [
+        2432,
+        95
+      ],
+      [
+        2436,
+        80
+      ],
+      [
+        2451,
+        78
+      ],
+      [
+        2459,
+        67
+      ],
+      [
+        2428,
+        65
+      ]
+    ],
+    "geometry": [
+      [
+        2428,
+        65
+      ],
+      [
+        2428,
+        79
+      ],
+      [
+        2422,
+        80
+      ],
+      [
+        2428,
+        111
+      ],
+      [
+        2447,
+        115
+      ],
+      [
+        2462,
+        110
+      ],
+      [
+        2442,
+        112
+      ],
+      [
+        2441,
+        97
+      ],
+      [
+        2432,
+        95
+      ],
+      [
+        2436,
+        80
+      ],
+      [
+        2451,
+        78
+      ],
+      [
+        2459,
+        67
+      ],
+      [
+        2428,
+        65
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 811.0,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_064",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 64",
+    "pixel_coordinates": [
+      [
+        1513,
+        954
+      ],
+      [
+        1518,
+        1055
+      ],
+      [
+        1529,
+        1060
+      ],
+      [
+        1521,
+        956
+      ],
+      [
+        1513,
+        954
+      ]
+    ],
+    "geometry": [
+      [
+        1513,
+        954
+      ],
+      [
+        1518,
+        1055
+      ],
+      [
+        1529,
+        1060
+      ],
+      [
+        1521,
+        956
+      ],
+      [
+        1513,
+        954
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 951.0,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_065",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 65",
+    "pixel_coordinates": [
+      [
+        847,
+        890
+      ],
+      [
+        840,
+        913
+      ],
+      [
+        842,
+        963
+      ],
+      [
+        853,
+        963
+      ],
+      [
+        849,
+        919
+      ],
+      [
+        852,
+        892
+      ],
+      [
+        847,
+        890
+      ]
+    ],
+    "geometry": [
+      [
+        847,
+        890
+      ],
+      [
+        840,
+        913
+      ],
+      [
+        842,
+        963
+      ],
+      [
+        853,
+        963
+      ],
+      [
+        849,
+        919
+      ],
+      [
+        852,
+        892
+      ],
+      [
+        847,
+        890
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 656.0,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_066",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 66",
+    "pixel_coordinates": [
+      [
+        1384,
+        2074
+      ],
+      [
+        1369,
+        2085
+      ],
+      [
+        1371,
+        2092
+      ],
+      [
+        1387,
+        2105
+      ],
+      [
+        1420,
+        2155
+      ],
+      [
+        1423,
+        2145
+      ],
+      [
+        1382,
+        2095
+      ],
+      [
+        1384,
+        2074
+      ]
+    ],
+    "geometry": [
+      [
+        1384,
+        2074
+      ],
+      [
+        1369,
+        2085
+      ],
+      [
+        1371,
+        2092
+      ],
+      [
+        1387,
+        2105
+      ],
+      [
+        1420,
+        2155
+      ],
+      [
+        1423,
+        2145
+      ],
+      [
+        1382,
+        2095
+      ],
+      [
+        1384,
+        2074
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 549.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_067",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 67",
+    "pixel_coordinates": [
+      [
+        2609,
+        177
+      ],
+      [
+        2609,
+        190
+      ],
+      [
+        2620,
+        192
+      ],
+      [
+        2624,
+        223
+      ],
+      [
+        2639,
+        233
+      ],
+      [
+        2633,
+        225
+      ],
+      [
+        2637,
+        220
+      ],
+      [
+        2629,
+        180
+      ],
+      [
+        2624,
+        184
+      ],
+      [
+        2623,
+        177
+      ],
+      [
+        2609,
+        177
+      ]
+    ],
+    "geometry": [
+      [
+        2609,
+        177
+      ],
+      [
+        2609,
+        190
+      ],
+      [
+        2620,
+        192
+      ],
+      [
+        2624,
+        223
+      ],
+      [
+        2639,
+        233
+      ],
+      [
+        2633,
+        225
+      ],
+      [
+        2637,
+        220
+      ],
+      [
+        2629,
+        180
+      ],
+      [
+        2624,
+        184
+      ],
+      [
+        2623,
+        177
+      ],
+      [
+        2609,
+        177
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 698.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_068",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 68",
+    "pixel_coordinates": [
+      [
+        2496,
+        68
+      ],
+      [
+        2496,
+        75
+      ],
+      [
+        2522,
+        80
+      ],
+      [
+        2528,
+        95
+      ],
+      [
+        2543,
+        85
+      ],
+      [
+        2552,
+        92
+      ],
+      [
+        2550,
+        99
+      ],
+      [
+        2559,
+        97
+      ],
+      [
+        2551,
+        80
+      ],
+      [
+        2527,
+        81
+      ],
+      [
+        2531,
+        65
+      ],
+      [
+        2527,
+        70
+      ],
+      [
+        2496,
+        68
+      ]
+    ],
+    "geometry": [
+      [
+        2496,
+        68
+      ],
+      [
+        2496,
+        75
+      ],
+      [
+        2522,
+        80
+      ],
+      [
+        2528,
+        95
+      ],
+      [
+        2543,
+        85
+      ],
+      [
+        2552,
+        92
+      ],
+      [
+        2550,
+        99
+      ],
+      [
+        2559,
+        97
+      ],
+      [
+        2551,
+        80
+      ],
+      [
+        2527,
+        81
+      ],
+      [
+        2531,
+        65
+      ],
+      [
+        2527,
+        70
+      ],
+      [
+        2496,
+        68
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 620.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_069",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 69",
+    "pixel_coordinates": [
+      [
+        2015,
+        87
+      ],
+      [
+        2008,
+        88
+      ],
+      [
+        2010,
+        97
+      ],
+      [
+        2007,
+        102
+      ],
+      [
+        2001,
+        102
+      ],
+      [
+        1999,
+        113
+      ],
+      [
+        1984,
+        112
+      ],
+      [
+        1984,
+        117
+      ],
+      [
+        1999,
+        117
+      ],
+      [
+        2001,
+        127
+      ],
+      [
+        2014,
+        127
+      ],
+      [
+        2021,
+        115
+      ],
+      [
+        2015,
+        87
+      ]
+    ],
+    "geometry": [
+      [
+        2015,
+        87
+      ],
+      [
+        2008,
+        88
+      ],
+      [
+        2010,
+        97
+      ],
+      [
+        2007,
+        102
+      ],
+      [
+        2001,
+        102
+      ],
+      [
+        1999,
+        113
+      ],
+      [
+        1984,
+        112
+      ],
+      [
+        1984,
+        117
+      ],
+      [
+        1999,
+        117
+      ],
+      [
+        2001,
+        127
+      ],
+      [
+        2014,
+        127
+      ],
+      [
+        2021,
+        115
+      ],
+      [
+        2015,
+        87
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 650.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_070",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 70",
+    "pixel_coordinates": [
+      [
+        240,
+        1326
+      ],
+      [
+        222,
+        1328
+      ],
+      [
+        223,
+        1339
+      ],
+      [
+        231,
+        1353
+      ],
+      [
+        231,
+        1358
+      ],
+      [
+        226,
+        1359
+      ],
+      [
+        229,
+        1368
+      ],
+      [
+        238,
+        1359
+      ],
+      [
+        246,
+        1365
+      ],
+      [
+        240,
+        1326
+      ]
+    ],
+    "geometry": [
+      [
+        240,
+        1326
+      ],
+      [
+        222,
+        1328
+      ],
+      [
+        223,
+        1339
+      ],
+      [
+        231,
+        1353
+      ],
+      [
+        231,
+        1358
+      ],
+      [
+        226,
+        1359
+      ],
+      [
+        229,
+        1368
+      ],
+      [
+        238,
+        1359
+      ],
+      [
+        246,
+        1365
+      ],
+      [
+        240,
+        1326
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 608.0,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_071",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 71",
+    "pixel_coordinates": [
+      [
+        2396,
+        2047
+      ],
+      [
+        2362,
+        2067
+      ],
+      [
+        2380,
+        2080
+      ],
+      [
+        2380,
+        2089
+      ],
+      [
+        2382,
+        2075
+      ],
+      [
+        2396,
+        2070
+      ],
+      [
+        2396,
+        2047
+      ]
+    ],
+    "geometry": [
+      [
+        2396,
+        2047
+      ],
+      [
+        2362,
+        2067
+      ],
+      [
+        2380,
+        2080
+      ],
+      [
+        2380,
+        2089
+      ],
+      [
+        2382,
+        2075
+      ],
+      [
+        2396,
+        2070
+      ],
+      [
+        2396,
+        2047
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 564.0,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_072",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 72",
+    "pixel_coordinates": [
+      [
+        811,
+        1431
+      ],
+      [
+        800,
+        1435
+      ],
+      [
+        798,
+        1440
+      ],
+      [
+        784,
+        1443
+      ],
+      [
+        781,
+        1441
+      ],
+      [
+        779,
+        1447
+      ],
+      [
+        788,
+        1459
+      ],
+      [
+        801,
+        1456
+      ],
+      [
+        803,
+        1451
+      ],
+      [
+        817,
+        1444
+      ],
+      [
+        818,
+        1440
+      ],
+      [
+        811,
+        1431
+      ]
+    ],
+    "geometry": [
+      [
+        811,
+        1431
+      ],
+      [
+        800,
+        1435
+      ],
+      [
+        798,
+        1440
+      ],
+      [
+        784,
+        1443
+      ],
+      [
+        781,
+        1441
+      ],
+      [
+        779,
+        1447
+      ],
+      [
+        788,
+        1459
+      ],
+      [
+        801,
+        1456
+      ],
+      [
+        803,
+        1451
+      ],
+      [
+        817,
+        1444
+      ],
+      [
+        818,
+        1440
+      ],
+      [
+        811,
+        1431
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 557.0,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_073",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 73",
+    "pixel_coordinates": [
+      [
+        2390,
+        372
+      ],
+      [
+        2390,
+        382
+      ],
+      [
+        2384,
+        384
+      ],
+      [
+        2385,
+        393
+      ],
+      [
+        2399,
+        393
+      ],
+      [
+        2400,
+        399
+      ],
+      [
+        2428,
+        399
+      ],
+      [
+        2420,
+        384
+      ],
+      [
+        2397,
+        384
+      ],
+      [
+        2395,
+        370
+      ],
+      [
+        2390,
+        372
+      ]
+    ],
+    "geometry": [
+      [
+        2390,
+        372
+      ],
+      [
+        2390,
+        382
+      ],
+      [
+        2384,
+        384
+      ],
+      [
+        2385,
+        393
+      ],
+      [
+        2399,
+        393
+      ],
+      [
+        2400,
+        399
+      ],
+      [
+        2428,
+        399
+      ],
+      [
+        2420,
+        384
+      ],
+      [
+        2397,
+        384
+      ],
+      [
+        2395,
+        370
+      ],
+      [
+        2390,
+        372
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 587.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_074",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 74",
+    "pixel_coordinates": [
+      [
+        2895,
+        2208
+      ],
+      [
+        2864,
+        2209
+      ],
+      [
+        2864,
+        2239
+      ],
+      [
+        2867,
+        2239
+      ],
+      [
+        2868,
+        2223
+      ],
+      [
+        2877,
+        2222
+      ],
+      [
+        2881,
+        2227
+      ],
+      [
+        2894,
+        2227
+      ],
+      [
+        2895,
+        2208
+      ]
+    ],
+    "geometry": [
+      [
+        2895,
+        2208
+      ],
+      [
+        2864,
+        2209
+      ],
+      [
+        2864,
+        2239
+      ],
+      [
+        2867,
+        2239
+      ],
+      [
+        2868,
+        2223
+      ],
+      [
+        2877,
+        2222
+      ],
+      [
+        2881,
+        2227
+      ],
+      [
+        2894,
+        2227
+      ],
+      [
+        2895,
+        2208
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 553.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_075",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 75",
+    "pixel_coordinates": [
+      [
+        1916,
+        1751
+      ],
+      [
+        1913,
+        1757
+      ],
+      [
+        1951,
+        1816
+      ],
+      [
+        1959,
+        1808
+      ],
+      [
+        1944,
+        1799
+      ],
+      [
+        1943,
+        1788
+      ],
+      [
+        1935,
+        1787
+      ],
+      [
+        1936,
+        1776
+      ],
+      [
+        1928,
+        1775
+      ],
+      [
+        1923,
+        1753
+      ],
+      [
+        1916,
+        1751
+      ]
+    ],
+    "geometry": [
+      [
+        1916,
+        1751
+      ],
+      [
+        1913,
+        1757
+      ],
+      [
+        1951,
+        1816
+      ],
+      [
+        1959,
+        1808
+      ],
+      [
+        1944,
+        1799
+      ],
+      [
+        1943,
+        1788
+      ],
+      [
+        1935,
+        1787
+      ],
+      [
+        1936,
+        1776
+      ],
+      [
+        1928,
+        1775
+      ],
+      [
+        1923,
+        1753
+      ],
+      [
+        1916,
+        1751
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 468.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_076",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 76",
+    "pixel_coordinates": [
+      [
+        1922,
+        447
+      ],
+      [
+        1936,
+        463
+      ],
+      [
+        1931,
+        467
+      ],
+      [
+        1952,
+        465
+      ],
+      [
+        1947,
+        469
+      ],
+      [
+        1966,
+        482
+      ],
+      [
+        1980,
+        507
+      ],
+      [
+        1975,
+        484
+      ],
+      [
+        1981,
+        480
+      ],
+      [
+        1968,
+        479
+      ],
+      [
+        1957,
+        465
+      ],
+      [
+        1922,
+        447
+      ]
+    ],
+    "geometry": [
+      [
+        1922,
+        447
+      ],
+      [
+        1936,
+        463
+      ],
+      [
+        1931,
+        467
+      ],
+      [
+        1952,
+        465
+      ],
+      [
+        1947,
+        469
+      ],
+      [
+        1966,
+        482
+      ],
+      [
+        1980,
+        507
+      ],
+      [
+        1975,
+        484
+      ],
+      [
+        1981,
+        480
+      ],
+      [
+        1968,
+        479
+      ],
+      [
+        1957,
+        465
+      ],
+      [
+        1922,
+        447
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 482.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_077",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 77",
+    "pixel_coordinates": [
+      [
+        600,
+        1372
+      ],
+      [
+        600,
+        1380
+      ],
+      [
+        595,
+        1385
+      ],
+      [
+        582,
+        1387
+      ],
+      [
+        591,
+        1393
+      ],
+      [
+        592,
+        1401
+      ],
+      [
+        597,
+        1398
+      ],
+      [
+        601,
+        1406
+      ],
+      [
+        607,
+        1406
+      ],
+      [
+        615,
+        1399
+      ],
+      [
+        616,
+        1392
+      ],
+      [
+        600,
+        1372
+      ]
+    ],
+    "geometry": [
+      [
+        600,
+        1372
+      ],
+      [
+        600,
+        1380
+      ],
+      [
+        595,
+        1385
+      ],
+      [
+        582,
+        1387
+      ],
+      [
+        591,
+        1393
+      ],
+      [
+        592,
+        1401
+      ],
+      [
+        597,
+        1398
+      ],
+      [
+        601,
+        1406
+      ],
+      [
+        607,
+        1406
+      ],
+      [
+        615,
+        1399
+      ],
+      [
+        616,
+        1392
+      ],
+      [
+        600,
+        1372
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 521.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_078",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 78",
+    "pixel_coordinates": [
+      [
+        2059,
+        1247
+      ],
+      [
+        2049,
+        1249
+      ],
+      [
+        2052,
+        1259
+      ],
+      [
+        2040,
+        1264
+      ],
+      [
+        2029,
+        1254
+      ],
+      [
+        1987,
+        1270
+      ],
+      [
+        2004,
+        1266
+      ],
+      [
+        2016,
+        1275
+      ],
+      [
+        2013,
+        1267
+      ],
+      [
+        2020,
+        1260
+      ],
+      [
+        2027,
+        1268
+      ],
+      [
+        2049,
+        1262
+      ],
+      [
+        2058,
+        1267
+      ],
+      [
+        2059,
+        1247
+      ]
+    ],
+    "geometry": [
+      [
+        2059,
+        1247
+      ],
+      [
+        2049,
+        1249
+      ],
+      [
+        2052,
+        1259
+      ],
+      [
+        2040,
+        1264
+      ],
+      [
+        2029,
+        1254
+      ],
+      [
+        1987,
+        1270
+      ],
+      [
+        2004,
+        1266
+      ],
+      [
+        2016,
+        1275
+      ],
+      [
+        2013,
+        1267
+      ],
+      [
+        2020,
+        1260
+      ],
+      [
+        2027,
+        1268
+      ],
+      [
+        2049,
+        1262
+      ],
+      [
+        2058,
+        1267
+      ],
+      [
+        2059,
+        1247
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 440.0,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  },
+  {
+    "id": "road_path_079",
+    "type": "pathway",
+    "name": "Pedestrian Walkway 79",
+    "pixel_coordinates": [
+      [
+        1727,
+        1481
+      ],
+      [
+        1721,
+        1480
+      ],
+      [
+        1720,
+        1485
+      ],
+      [
+        1715,
+        1485
+      ],
+      [
+        1714,
+        1491
+      ],
+      [
+        1704,
+        1490
+      ],
+      [
+        1703,
+        1495
+      ],
+      [
+        1699,
+        1493
+      ],
+      [
+        1697,
+        1501
+      ],
+      [
+        1700,
+        1504
+      ],
+      [
+        1710,
+        1503
+      ],
+      [
+        1713,
+        1507
+      ],
+      [
+        1729,
+        1503
+      ],
+      [
+        1727,
+        1481
+      ]
+    ],
+    "geometry": [
+      [
+        1727,
+        1481
+      ],
+      [
+        1721,
+        1480
+      ],
+      [
+        1720,
+        1485
+      ],
+      [
+        1715,
+        1485
+      ],
+      [
+        1714,
+        1491
+      ],
+      [
+        1704,
+        1490
+      ],
+      [
+        1703,
+        1495
+      ],
+      [
+        1699,
+        1493
+      ],
+      [
+        1697,
+        1501
+      ],
+      [
+        1700,
+        1504
+      ],
+      [
+        1710,
+        1503
+      ],
+      [
+        1713,
+        1507
+      ],
+      [
+        1729,
+        1503
+      ],
+      [
+        1727,
+        1481
+      ]
+    ],
+    "source_page": 1,
+    "extraction_method": "color_segmentation",
+    "geometry_status": "UNVERIFIED",
+    "area_pixels": 507.5,
+    "coordinate_reference": "source_map_image_pixels",
+    "verification_status": "UNCERTAIN",
+    "topology_status": "NOT_A_NETWORK"
+  }
+]

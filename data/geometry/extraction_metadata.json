@@ -1,0 +1,89 @@
+{
+  "dataset_name": "Campus Sentinel Mt. SAC 2D candidate geometry",
+  "stage": 1,
+  "release_status": "AUDIT_QUARANTINED",
+  "coordinate_system": "source_map_image_pixels",
+  "extraction_summary": {
+    "building_candidates": 204,
+    "road_path_candidates": 79,
+    "open_space_candidates": 45,
+    "priority_buildings_rejected": 5
+  },
+  "priority_buildings_verification": {
+    "6": {
+      "candidate_centroid_pixel": [
+        1257.0,
+        1929.0
+      ],
+      "source_label_pixel": [
+        600,
+        1370
+      ],
+      "separation_pixels": 862.6,
+      "pixel_area": 1530.5,
+      "vertex_count": 8,
+      "status": "INCORRECT"
+    },
+    "9B": {
+      "candidate_centroid_pixel": [
+        1437.5,
+        2096.0
+      ],
+      "source_label_pixel": [
+        700,
+        1160
+      ],
+      "separation_pixels": 1191.6,
+      "pixel_area": 2506.5,
+      "vertex_count": 10,
+      "status": "INCORRECT"
+    },
+    "60": {
+      "candidate_centroid_pixel": [
+        1934.5,
+        125.5
+      ],
+      "source_label_pixel": [
+        900,
+        1560
+      ],
+      "separation_pixels": 1768.6,
+      "pixel_area": 2084.5,
+      "vertex_count": 8,
+      "status": "INCORRECT"
+    },
+    "410": {
+      "candidate_centroid_pixel": [
+        1641.0,
+        1919.0
+      ],
+      "source_label_pixel": [
+        970,
+        1250
+      ],
+      "separation_pixels": 947.5,
+      "pixel_area": 9776.33,
+      "vertex_count": 8,
+      "status": "INCORRECT"
+    },
+    "720": {
+      "candidate_centroid_pixel": [
+        1351.5,
+        1481.5
+      ],
+      "source_label_pixel": [
+        2150,
+        1300
+      ],
+      "separation_pixels": 818.9,
+      "pixel_area": 1156.0,
+      "vertex_count": 12,
+      "status": "INCORRECT"
+    }
+  },
+  "limitations": [
+    "Raster segmentation is not building verification.",
+    "Candidate roads are polygons, not a movement graph.",
+    "No metric or WGS84 claims are retained."
+  ]
+}

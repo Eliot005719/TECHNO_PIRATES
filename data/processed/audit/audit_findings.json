@@ -1,0 +1,81 @@
+{
+  "priority_buildings": {
+    "6": {
+      "candidate_centroid_pixel": [
+        1257.0,
+        1929.0
+      ],
+      "source_label_pixel": [
+        600,
+        1370
+      ],
+      "separation_pixels": 862.6,
+      "pixel_area": 1530.5,
+      "vertex_count": 8,
+      "status": "INCORRECT"
+    },
+    "9B": {
+      "candidate_centroid_pixel": [
+        1437.5,
+        2096.0
+      ],
+      "source_label_pixel": [
+        700,
+        1160
+      ],
+      "separation_pixels": 1191.6,
+      "pixel_area": 2506.5,
+      "vertex_count": 10,
+      "status": "INCORRECT"
+    },
+    "60": {
+      "candidate_centroid_pixel": [
+        1934.5,
+        125.5
+      ],
+      "source_label_pixel": [
+        900,
+        1560
+      ],
+      "separation_pixels": 1768.6,
+      "pixel_area": 2084.5,
+      "vertex_count": 8,
+      "status": "INCORRECT"
+    },
+    "410": {
+      "candidate_centroid_pixel": [
+        1641.0,
+        1919.0
+      ],
+      "source_label_pixel": [
+        970,
+        1250
+      ],
+      "separation_pixels": 947.5,
+      "pixel_area": 9776.33,
+      "vertex_count": 8,
+      "status": "INCORRECT"
+    },
+    "720": {
+      "candidate_centroid_pixel": [
+        1351.5,
+        1481.5
+      ],
+      "source_label_pixel": [
+        2150,
+        1300
+      ],
+      "separation_pixels": 818.9,
+      "pixel_area": 1156.0,
+      "vertex_count": 12,
+      "status": "INCORRECT"
+    }
+  },
+  "findings": [
+    "Building 6 candidate is displaced 862.6 px from its labelled location.",
+    "Building 9B candidate is displaced 1191.6 px from its labelled location.",
+    "Building 60 candidate is displaced 1768.6 px from its labelled location.",
+    "Building 410 candidate is displaced 947.5 px from its labelled location.",
+    "Building 720 candidate is displaced 818.9 px from its labelled location."
+  ]
+}

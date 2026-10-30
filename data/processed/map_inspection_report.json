@@ -1,0 +1,147 @@
+{
+  "pdf_metadata": {
+    "format": "PDF 1.7",
+    "title": "Mt. SAC Campus Map",
+    "author": "Jeffrey B. George",
+    "subject": "",
+    "keywords": "",
+    "creator": "Adobe InDesign 20.1 (Macintosh)",
+    "producer": "Adobe PDF Library 17.0",
+    "creationDate": "D:20250128161319-08'00'",
+    "modDate": "D:20260622142309-07'00'",
+    "trapped": "",
+    "encryption": null,
+    "page_count": 3,
+    "pages": [
+      {
+        "page_number": 0,
+        "width_pts": 792.0,
+        "height_pts": 612.0,
+        "rotation": 0,
+        "num_drawings": 385,
+        "num_images": 8,
+        "text_length": 479
+      },
+      {
+        "page_number": 1,
+        "width_pts": 792.0,
+        "height_pts": 612.0,
+        "rotation": 0,
+        "num_drawings": 6,
+        "num_images": 1,
+        "text_length": 216
+      },
+      {
+        "page_number": 2,
+        "width_pts": 792.0,
+        "height_pts": 612.0,
+        "rotation": 0,
+        "num_drawings": 3,
+        "num_images": 0,
+        "text_length": 14793
+      }
+    ]
+  },
+  "legend_directory_count": 59,
+  "priority_buildings": {
+    "6": {
+      "building_code": "6",
+      "raw_codes": [
+        "6",
+        "6-101",
+        "6-140",
+        "6-160",
+        "6-261",
+        "6-262"
+      ],
+      "facilities": [
+        "ASAC (Academic Spport and Achievement Center)",
+        "Broadcast Services (Media) .  .  .  .  .  .  .  .  .  .  .  .",
+        "and Student Success  .  .  .  .  .  .  .  .  .  .  .  .",
+        "Dual Enrollment  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .",
+        "Library / Learning Technology Center  .  .  .  .  .",
+        "Learning Division Office  .  .  .  .  .  .  .  .  .",
+        "Center (MARCS)  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .",
+        "Media Services (Broadcast) .  .  .  .  .  .  .  .  .  .  .  .",
+        "Pride Center  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .",
+        "Development  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .",
+        "TV Production/Broadcasting .  .  .  .  .  .  .  .  .  .  .",
+        "Umoja   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ."
+      ],
+      "primary_name": "Library / Learning Technology Center",
+      "is_priority": true
+    },
+    "9B": {
+      "building_code": "9B",
+      "raw_codes": [
+        "9B",
+        "9B-102"
+      ],
+      "facilities": [
+        "Accessibility Resource Centers for Students (ACCESS)",
+        "Achieving in College, Ensuring Success (ACES)",
+        "Admissions & Records  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .",
+        "Assessment  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .",
+        "CalWORKs  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .",
+        "Career & Transfer Services  .  .  .  .  .  .  .  .  .  .  .  .",
+        "Counseling Department .  .  .  .  .  .  .  .  .  .  .  .  .  .",
+        "EOPS/CARE  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .",
+        "Financial Aid/Scholarships  .  .  .  .  .  .  .  .  .  .  .  .",
+        "Student Services Center .  .  .  .  .  .  .  .  .  .  .  .  .  ."
+      ],
+      "primary_name": "Student Services Center",
+      "is_priority": true
+    },
+    "60": {
+      "building_code": "60",
+      "raw_codes": [
+        "60"
+      ],
+      "facilities": [
+        "Science Laboratories  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ."
+      ],
+      "primary_name": "Science Laboratories",
+      "is_priority": true
+    },
+    "410": {
+      "building_code": "410",
+      "raw_codes": [
+        "410-1030",
+        "410-2040",
+        "410-2120",
+        "410-3000",
+        "410-3020",
+        "410-3200"
+      ],
+      "facilities": [
+        "Event Services .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .",
+        "Foundation & Alumni Association Office",
+        "Rising Scholars  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .",
+        "Student Life Center .  .  .  .  .  .  .  .  .  .  .  .  .",
+        "Summit .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .",
+        "Summit Balcony  .  .  .  .  .  .  .  .  .  .  .  .  .  .",
+        "Technical Services  .  .  .  .  .  .  .  .  .  .  .  ."
+      ],
+      "primary_name": "Student Center",
+      "is_priority": true
+    },
+    "720": {
+      "building_code": "720",
+      "raw_codes": [
+        "720",
+        "720-2200"
+      ],
+      "facilities": [
+        "Gymnasium  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .",
+        "Wellness Center .  .  .  .  .  .  .  .  .  .  .  .  .  .  ."
+      ],
+      "primary_name": "Gymnasium / Wellness Center",
+      "is_priority": true
+    }
+  },
+  "base_image": {
+    "path": "data\\processed\\campus_base.png",
+    "width": 3159,
+    "height": 2409
+  }
+}

@@ -1,6 +1,7 @@
 import React from 'react'
 import { useCampus } from '../../context/CampusContext'
-import { rooms } from '../../data/visual-geometry'
+import { campusBuildings, rooms } from '../../data/visual-geometry'
+import type { WallAttenuation } from '../../simulation/propagation/propagationTypes'
 
 export const PropagationPanel: React.FC = () => {
   const {
@@ -12,46 +13,49 @@ export const PropagationPanel: React.FC = () => {
     setCutaway,
     selectedRoomId,
     setSelectedRoomId,
+    selectedBuildingId,
+    setSelectedBuildingId,
+    selectedFloorId,
+    setSelectedFloorId,
     inspectedCoverage,
     nodes,
     selectedApId,
     setSelectedApId,
-    addEvent,
+    updateNodePower,
+    updateNodeGain,
+    enterBuilding,
+    setSceneMode,
     settings
   } = useCampus()
 
   const selectedRoom = rooms.find(r => r.id === selectedRoomId)
-  const activeNodes = nodes.filter(n => n.active)
+  const selectedNode = nodes.find(node => node.id === selectedApId)
+  const wallAttenuation = {
+    partition: propSettings.wallAttenuation?.partition ?? 3.5,
+    exterior: propSettings.wallAttenuation?.exterior ?? 12,
+    glass: propSettings.wallAttenuation?.glass ?? 2.5,
+    concrete: propSettings.wallAttenuation?.concrete ?? 15,
+    brick: propSettings.wallAttenuation?.brick ?? 10
+  }
+  const wallMaterials: { key: keyof WallAttenuation; label: string }[] = [
+    { key: 'partition', label: 'Interior partition' },
+    { key: 'concrete', label: 'Concrete' },
+    { key: 'brick', label: 'Brick' },
+    { key: 'glass', label: 'Glass partition' },
+    { key: 'exterior', label: 'Exterior wall' }
+  ]
 
   const handleModeChange = (mode: 'combined' | 'individual') => {
     setPropSettings(p => ({ ...p, mode }))
-    addEvent(
-      'propagation_changed',
-      'propagation',
-      'Coverage Mode Updated',
-      `Switched propagation display to ${mode} mode.`
-    )
   }
 
   const handleExponentChange = (exponent: number) => {
     setPropSettings(p => ({ ...p, exponent }))
-    addEvent(
-      'propagation_changed',
-      'propagation',
-      'Path-Loss Exponent Changed',
-      `Exponent set to ${exponent.toFixed(1)}.`
-    )
   }
 
   const handleToggleHeatmap = () => {
     const nextVal = !heatmapVisible
     setHeatmapVisible(nextVal)
-    addEvent(
-      'heatmap_toggled',
-      'propagation',
-      nextVal ? 'Heatmap Displayed' : 'Heatmap Hidden',
-      `3D planar propagation heatmap was toggled ${nextVal ? 'on' : 'off'}.`
-    )
   }
 
   return (
@@ -85,13 +89,44 @@ export const PropagationPanel: React.FC = () => {
 
       {/* Coverage Mode Selection */}
       <div className="control-group">
+        <label className="input-label">Building, Floor and Room</label>
+        <select
+          className="select-input"
+          value={selectedBuildingId}
+          onChange={event => {
+            const buildingId = event.target.value
+            setSelectedBuildingId(buildingId)
+            if (buildingId === '410') {
+              enterBuilding('410')
+            } else {
+              setSceneMode('campus')
+            }
+          }}
+        >
+          {campusBuildings.map(building => (
+            <option key={building.id} value={building.id}>
+              Building {building.id} — {building.name}
+            </option>
+          ))}
+        </select>
+        <select
+          className="select-input"
+          value={selectedFloorId}
+          onChange={event => setSelectedFloorId(event.target.value)}
+          disabled={selectedBuildingId !== '410'}
+        >
+          <option value="Floor 1">Floor 1 (available interior model)</option>
+        </select>
+      </div>
+
+      <div className="control-group">
         <label className="input-label">Coverage Calculation Mode</label>
         <div className="segmented-control">
           <button
             className={propSettings.mode === 'combined' ? 'active' : ''}
             onClick={() => handleModeChange('combined')}
           >
-            Combined (Strongest Active AP)
+            Strongest Active AP (Best Server)
           </button>
           <button
             className={propSettings.mode === 'individual' ? 'active' : ''}
@@ -102,31 +137,45 @@ export const PropagationPanel: React.FC = () => {
         </div>
       </div>
 
-      {/* AP Selector for Individual Mode */}
-      {propSettings.mode === 'individual' && (
-        <div className="control-group">
-          <label className="input-label">Select Transmitter to Inspect</label>
+      {/* AP Selector */}
+      <div className="control-group">
+          <label className="input-label">Selected Access Point</label>
           <select
             className="select-input"
-            value={propSettings.selectedApId}
+            value={selectedApId}
             onChange={e => {
-              const id = e.target.value
-              setSelectedApId(id)
-              setPropSettings(p => ({ ...p, selectedApId: id }))
-              addEvent(
-                'propagation_changed',
-                'propagation',
-                'Inspected AP Changed',
-                `Inspecting individual RF coverage for AP ${id}.`
-              )
-            }}
+                const id = e.target.value
+                setSelectedApId(id)
+              }}
           >
             {nodes.map(n => (
-              <option key={n.id} value={n.id} disabled={!n.active}>
+              <option key={n.id} value={n.id}>
                 {n.name} ({n.id}) {!n.active ? '[OFFLINE]' : ''}
               </option>
             ))}
           </select>
+          {selectedNode && (
+            <small className="muted">
+              {selectedNode.band} · {selectedNode.powerDbm ?? 18} dBm · {selectedNode.active ? 'Active' : 'Offline'}
+            </small>
+          )}
+      </div>
+
+      {selectedNode && (
+        <div className="control-group">
+          <div className="slider-header">
+            <label className="input-label">Transmit Power — {selectedNode.id}</label>
+            <span className="slider-val">{(selectedNode.powerDbm ?? 18).toFixed(1)} dBm</span>
+          </div>
+          <input
+            type="range"
+            min="0"
+            max="30"
+            step="0.5"
+            value={selectedNode.powerDbm ?? 18}
+            onChange={event => updateNodePower(selectedNode.id, parseFloat(event.target.value))}
+            className="range-input"
+          />
         </div>
       )}
 
@@ -150,6 +199,81 @@ export const PropagationPanel: React.FC = () => {
           <span>3.0 (Office/Partitions)</span>
           <span>4.0 (Dense Obstacles)</span>
         </div>
+      </div>
+
+      <div className="control-group">
+        <div className="slider-header">
+          <label className="input-label">Heatmap Opacity</label>
+          <span className="slider-val">{Math.round((propSettings.heatmapOpacity ?? 0.44) * 100)}%</span>
+        </div>
+        <input
+          type="range"
+          min="0.1"
+          max="0.8"
+          step="0.05"
+          value={propSettings.heatmapOpacity ?? 0.44}
+          onChange={event => setPropSettings(p => ({ ...p, heatmapOpacity: parseFloat(event.target.value) }))}
+          className="range-input"
+        />
+      </div>
+
+      <div className="control-group">
+        <div className="slider-header">
+          <label className="input-label">Receiver Gain</label>
+          <span className="slider-val">{propSettings.receiverGainDbi.toFixed(1)} dBi</span>
+        </div>
+        <input
+          type="range"
+          min="-5"
+          max="10"
+          step="0.5"
+          value={propSettings.receiverGainDbi}
+          onChange={event => setPropSettings(p => ({ ...p, receiverGainDbi: parseFloat(event.target.value) }))}
+          className="range-input"
+        />
+      </div>
+
+      {selectedNode && (
+        <div className="control-group">
+          <div className="slider-header">
+            <label className="input-label">Transmit Antenna Gain</label>
+            <span className="slider-val">{(selectedNode.gainDbi ?? 0).toFixed(1)} dBi</span>
+          </div>
+          <input
+            type="range"
+            min="-10"
+            max="20"
+            step="0.5"
+            value={selectedNode.gainDbi ?? 0}
+            onChange={event => updateNodeGain(selectedNode.id, parseFloat(event.target.value))}
+            className="range-input"
+          />
+        </div>
+      )}
+
+      <div className="control-group">
+        <label className="input-label">Material Attenuation (illustrative dB)</label>
+        {wallMaterials.map(material => (
+          <div className="slider-header" key={material.key}>
+            <label className="input-label">{material.label}</label>
+            <span className="slider-val">{wallAttenuation[material.key].toFixed(1)}</span>
+            <input
+              type="range"
+              min="0"
+              max="30"
+              step="0.5"
+              value={wallAttenuation[material.key]}
+              onChange={event => {
+                const value = parseFloat(event.target.value)
+                setPropSettings(previous => ({
+                  ...previous,
+                  wallAttenuation: { ...wallAttenuation, [material.key]: value }
+                }))
+              }}
+              className="range-input"
+            />
+          </div>
+        ))}
       </div>
 
       {/* Signal Strength Legend */}
@@ -204,6 +328,30 @@ export const PropagationPanel: React.FC = () => {
             <dd>{selectedRoom ? selectedRoom.name : selectedRoomId}</dd>
           </div>
           <div>
+            <dt>Selected AP</dt>
+            <dd>{selectedNode ? `${selectedNode.name} (${selectedNode.id})` : 'None'}</dd>
+          </div>
+          {selectedNode && (
+            <>
+              <div>
+                <dt>AP Frequency</dt>
+                <dd>{selectedNode.band}</dd>
+              </div>
+              <div>
+                <dt>Configured Transmit Power</dt>
+                <dd>{(selectedNode.powerDbm ?? 18).toFixed(1)} dBm</dd>
+              </div>
+              <div>
+                <dt>Transmit Antenna Gain</dt>
+                <dd>{(selectedNode.gainDbi ?? 0).toFixed(1)} dBi</dd>
+              </div>
+            </>
+          )}
+          <div>
+            <dt>Coverage Mode</dt>
+            <dd>{propSettings.mode === 'combined' ? 'Strongest Active AP (Best Server)' : 'Individual AP'}</dd>
+          </div>
+          <div>
             <dt>Estimated RSSI</dt>
             <dd className="bold" style={{ fontSize: 16 }}>
               {inspectedCoverage.rssi.toFixed(1)} dBm
@@ -236,12 +384,13 @@ export const PropagationPanel: React.FC = () => {
       <div className="side-note" style={{ marginTop: 12 }}>
         <b>Simulation Assumption Notice</b>
         <p>
-          Partition attenuation: 3 dB · Exterior wall: 10 dB · Glass: 2 dB.
-          Human body shadowing: {settings.bodyAttenuationDb} dB within 1.2m.
+          Partition attenuation: {wallAttenuation.partition.toFixed(1)} dB ·
+          Exterior wall: {wallAttenuation.exterior.toFixed(1)} dB ·
+          Glass: {wallAttenuation.glass.toFixed(1)} dB.
+          Human body shadowing: {settings.bodyAttenuationDb} dB per body intersected by the RF path.
           Illustrative computational model only; not certified RF site survey data.
         </p>
       </div>
     </div>
   )
 }
-

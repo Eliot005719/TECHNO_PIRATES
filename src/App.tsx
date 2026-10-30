@@ -39,7 +39,9 @@ function MainLayout() {
     nodes,
     meshOptions,
     coverage,
+    localCoverage,
     heatmapVisible,
+    propSettings,
     agents,
     settings,
     enterBuilding,
@@ -183,7 +185,9 @@ function MainLayout() {
             options={meshOptions}
             nodes={nodes}
             coverage={coverage}
+            localCoverage={localCoverage}
             heatmap={heatmapVisible && sceneMode === 'interior'}
+            heatmapOpacity={propSettings.heatmapOpacity}
             agents={agents}
             selectedAgentId={selectedAgentId}
             showTrails={settings.showTrails}

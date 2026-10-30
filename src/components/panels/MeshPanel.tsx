@@ -1,5 +1,6 @@
 import React from 'react'
 import { useCampus } from '../../context/CampusContext'
+import type { WifiNode } from '../../data/wifi-mesh'
 
 export const MeshPanel: React.FC = () => {
   const {
@@ -11,7 +12,10 @@ export const MeshPanel: React.FC = () => {
     setMeshOptions,
     setSceneMode,
     setPage,
-    setPropSettings
+    setPropSettings,
+    updateNodePower,
+    updateNodeGain,
+    updateNodeBand
   } = useCampus()
 
   const selectedNode = nodes.find(n => n.id === selectedApId)
@@ -110,6 +114,7 @@ export const MeshPanel: React.FC = () => {
               <div className="ap-card-details">
                 <span className="ap-badge">{n.band}</span>
                 <span className="ap-badge">{n.scope}</span>
+                {n.building && <span className="ap-badge">Building {n.building}</span>}
                 {n.room && <span className="ap-badge-room">Room: {n.room}</span>}
               </div>
 
@@ -155,12 +160,20 @@ export const MeshPanel: React.FC = () => {
               <dd>{selectedNode.id}</dd>
             </div>
             <div>
+              <dt>Building / Room</dt>
+              <dd>{selectedNode.building ? `Building ${selectedNode.building}` : 'Campus'}{selectedNode.room ? ` · ${selectedNode.room}` : ''}</dd>
+            </div>
+            <div>
               <dt>Operating Band</dt>
               <dd>{selectedNode.band}</dd>
             </div>
             <div>
+              <dt>Antenna Gain</dt>
+              <dd>{(selectedNode.gainDbi ?? 0).toFixed(1)} dBi</dd>
+            </div>
+            <div>
               <dt>TX Power</dt>
-              <dd>18.0 dBm (Simulated)</dd>
+              <dd>{(selectedNode.powerDbm ?? 18).toFixed(1)} dBm (Simulated)</dd>
             </div>
             <div>
               <dt>Location</dt>
@@ -180,6 +193,50 @@ export const MeshPanel: React.FC = () => {
             </div>
           </dl>
 
+          <div className="control-group">
+            <div className="slider-header">
+              <label className="input-label">Transmit Power</label>
+              <span className="slider-val">{(selectedNode.powerDbm ?? 18).toFixed(1)} dBm</span>
+            </div>
+            <input
+              type="range"
+              min="0"
+              max="30"
+              step="0.5"
+              value={selectedNode.powerDbm ?? 18}
+              onChange={event => updateNodePower(selectedNode.id, parseFloat(event.target.value))}
+              className="range-input"
+            />
+          </div>
+
+          <div className="control-group">
+            <label className="input-label">Operating Frequency</label>
+            <select
+              className="select-input"
+              value={selectedNode.band}
+              onChange={event => updateNodeBand(selectedNode.id, event.target.value as WifiNode['band'])}
+            >
+              <option value="5 GHz">5 GHz</option>
+              <option value="6 GHz">6 GHz</option>
+            </select>
+          </div>
+
+          <div className="control-group">
+            <div className="slider-header">
+              <label className="input-label">Transmit Antenna Gain</label>
+              <span className="slider-val">{(selectedNode.gainDbi ?? 0).toFixed(1)} dBi</span>
+            </div>
+            <input
+              type="range"
+              min="-10"
+              max="20"
+              step="0.5"
+              value={selectedNode.gainDbi ?? 0}
+              onChange={event => updateNodeGain(selectedNode.id, parseFloat(event.target.value))}
+              className="range-input"
+            />
+          </div>
+
           <button
             className={`primary ${selectedNode.active ? 'btn-danger' : 'btn-success'}`}
             onClick={() => toggleNodeActive(selectedNode.id)}
@@ -191,4 +248,3 @@ export const MeshPanel: React.FC = () => {
     </div>
   )
 }
-

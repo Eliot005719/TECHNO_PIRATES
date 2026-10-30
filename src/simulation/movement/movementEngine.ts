@@ -20,7 +20,9 @@ export interface Agent {
   index: number
   progress: number
   x: number
+  y: number
   z: number
+  buildingId: string
   room: string
   roomName: string
   floor: string

@@ -1,4 +1,4 @@
-export type WifiNode = { id: string; name: string; position: [number, number, number]; band: '5 GHz' | '6 GHz'; active: boolean; scope: 'campus' | 'building'; building?: string; room?: string; connections: string[]; accuracy_status: 'simulated_illustrative' }
+export type WifiNode = { id: string; name: string; position: [number, number, number]; band: '5 GHz' | '6 GHz'; active: boolean; powerDbm?: number; gainDbi?: number; scope: 'campus' | 'building'; building?: string; room?: string; connections: string[]; accuracy_status: 'simulated_illustrative' }
 export const wifiNodes: WifiNode[] = [
   { id:'ap-campus-west', name:'Campus West', position:[-14,4,4], band:'6 GHz', active:true, scope:'campus', connections:['ap-campus-core','ap-410-hall'], accuracy_status:'simulated_illustrative' },
   { id:'ap-campus-core', name:'Campus Core', position:[0,5,1], band:'6 GHz', active:true, scope:'campus', connections:['ap-campus-west','ap-campus-east','ap-410-hall'], accuracy_status:'simulated_illustrative' },

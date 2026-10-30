@@ -29,9 +29,10 @@ Usage:
 import sys
 import json
 import logging
+import math
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple, Any
+from typing import Dict, List, Optional, Sequence, Any
 import cv2
 import numpy as np
 
@@ -105,7 +106,7 @@ PRIORITY_BUILDING_LOCATIONS: Dict[str, Dict[str, Any]] = {
 def match_priority_building(
     code: str,
     target_info: Dict[str, Any],
-    all_contours: List[np.ndarray],
+    all_contours: Sequence[np.ndarray],
     transformer: CoordinateTransformer
 ) -> Optional[Dict[str, Any]]:
     """Find the best fitting contour that contains or is closest to the priority building anchor."""
@@ -129,23 +130,20 @@ def match_priority_building(
                     best_cnt = cnt
 
     if best_cnt is None:
-        logger.warning(f"Could not automatically match priority building {code}. Synthesizing from anchor bbox.")
-        hw = 35.0
-        pts = [
-            [tx - hw, ty - hw],
-            [tx + hw, ty - hw],
-            [tx + hw, ty + hw],
-            [tx - hw, ty + hw],
-            [tx - hw, ty - hw]
-        ]
-    else:
-        peri = cv2.arcLength(best_cnt, True)
-        approx = cv2.approxPolyDP(best_cnt, 0.015 * peri, True)
-        pts = approx.reshape(-1, 2).tolist()
-        if pts[0] != pts[-1]:
-            pts.append(pts[0])
+        logger.warning(f"Could not automatically match priority building {code}.")
+        return None
+
+    peri = cv2.arcLength(best_cnt, True)
+    approx = cv2.approxPolyDP(best_cnt, 0.015 * peri, True)
+    pts = approx.reshape(-1, 2).tolist()
+    if pts[0] != pts[-1]:
+        pts.append(pts[0])
 
     px_pts, valid, note = validate_and_repair_polygon(pts, f"building_{code.lower()}")
+    if not valid:
+        logger.warning(f"Could not validate contour candidate for priority building {code}: {note}")
+        return None
+
     metric_pts = transformer.transform_polygon_to_metric(px_pts)
 
     bx, by, bw, bh = cv2.boundingRect(np.array(px_pts, dtype=np.int32))
@@ -186,17 +184,29 @@ def extract_all_geometry() -> Dict[str, Any]:
     campus_base_path = PROJECT_ROOT / "data" / "processed" / "campus_base.png"
     calib_file = PROJECT_ROOT / "data" / "geometry" / "calibration_metadata.json"
 
-    # 1. Load calibration parameters
-    scale_m_per_px = 0.335
-    if calib_file.exists():
-        with open(calib_file, "r", encoding="utf-8") as f:
-            cdata = json.load(f)
-            scale_m_per_px = cdata.get("scale_meters_per_pixel", 0.335)
-            if cdata.get("calibration_status") == "UNVERIFIED" or scale_m_per_px is None:
-                raise RuntimeError(
-                    "Metric extraction is blocked: calibration is UNVERIFIED. "
-                    "Do not regenerate misleading metric geometry; obtain controls and a reviewed calibration first."
-                )
+    # 1. Load explicitly verified calibration parameters
+    if not calib_file.exists():
+        raise RuntimeError(
+            f"Metric extraction is blocked: calibration metadata is missing at {calib_file}."
+        )
+
+    with open(calib_file, "r", encoding="utf-8") as f:
+        cdata = json.load(f)
+
+    scale_m_per_px = cdata.get("scale_meters_per_pixel")
+    if (
+        cdata.get("calibration_status") != "VERIFIED"
+        or isinstance(scale_m_per_px, bool)
+        or not isinstance(scale_m_per_px, (int, float))
+        or not math.isfinite(scale_m_per_px)
+        or scale_m_per_px <= 0
+    ):
+        raise RuntimeError(
+            "Metric extraction is blocked: calibration must have status VERIFIED "
+            "and a finite, positive scale_meters_per_pixel. "
+            "Obtain controls and a reviewed calibration first."
+        )
+    scale_m_per_px = float(scale_m_per_px)
 
     transformer = CoordinateTransformer(
         meters_per_pixel=scale_m_per_px,

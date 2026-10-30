@@ -63,7 +63,7 @@ export const SettingsPanel: React.FC = () => {
             className="range-input"
           />
           <small className="muted">
-            Illustrative simulation assumption: Local shadowing loss applied when a human is within 1.2m of receiver.
+            Illustrative simulation assumption: Shadowing loss applies when a human obstacle intersects the RF path.
           </small>
         </div>
 
@@ -81,6 +81,18 @@ export const SettingsPanel: React.FC = () => {
               </option>
             ))}
           </select>
+        </div>
+
+        <div className="control-group">
+          <label className="input-label">Default Floor</label>
+          <select
+            className="select-input"
+            value={settings.defaultFloorId}
+            onChange={e => updateSettings({ defaultFloorId: e.target.value })}
+          >
+            <option value="Floor 1">Floor 1</option>
+          </select>
+          <small className="muted">Floor 1 is the currently modeled interior level.</small>
         </div>
 
         {/* Default Room Selection */}
@@ -111,7 +123,7 @@ export const SettingsPanel: React.FC = () => {
               })
             }
           >
-            <option value="combined">Combined (Strongest Active AP)</option>
+            <option value="combined">Strongest Active AP (Best Server)</option>
             <option value="individual">Individual AP Coverage</option>
           </select>
         </div>
@@ -166,4 +178,3 @@ export const SettingsPanel: React.FC = () => {
     </div>
   )
 }
-

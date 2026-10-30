@@ -28,6 +28,7 @@ export interface EventItem {
     | 'agent_stopped'
     | 'agent_reset'
     | 'room_entered'
+    | 'route_changed'
     | 'route_completed'
     | 'agent_added'
     | 'agent_removed'
@@ -45,7 +46,10 @@ export interface AgentSignalRecord {
   timestamp: number
   timeLabel: string
   agentId: string
+  buildingId: string
+  floor: string
   x: number
+  y: number
   z: number
   room: string
   roomName: string
@@ -57,6 +61,7 @@ export interface AgentSignalRecord {
 export interface AppSettings {
   updateIntervalMs: number
   defaultBuildingId: string
+  defaultFloorId: string
   defaultRoomId: string
   defaultHeatmapVisible: boolean
   defaultPropagationMode: 'combined' | 'individual'

@@ -124,6 +124,12 @@ export const OverviewPanel: React.FC = () => {
             <span className="value">{selectedAp ? selectedAp.name : selectedApId}</span>
           </div>
           <div className="kpi-item">
+            <span className="label">Network Status</span>
+            <span className={`value ${activeNodesCount > 0 ? 'online' : 'offline'}`}>
+              {activeNodesCount > 0 ? 'Operational' : 'All APs Offline'}
+            </span>
+          </div>
+          <div className="kpi-item">
             <span className="label">Topology Scope</span>
             <span className="value capitalize">{meshOptions.scope}</span>
           </div>
@@ -145,7 +151,9 @@ export const OverviewPanel: React.FC = () => {
         <div className="kpi-grid">
           <div className="kpi-item">
             <span className="label">Coverage Mode</span>
-            <span className="value capitalize">{propSettings.mode}</span>
+            <span className="value">
+              {propSettings.mode === 'combined' ? 'Strongest Active AP (Best Server)' : 'Individual AP'}
+            </span>
           </div>
           <div className="kpi-item">
             <span className="label">Heatmap Status</span>
@@ -154,6 +162,10 @@ export const OverviewPanel: React.FC = () => {
           <div className="kpi-item">
             <span className="label">Selected Location RSSI</span>
             <span className="value bold">{inspectedCoverage.rssi.toFixed(1)} dBm</span>
+          </div>
+          <div className="kpi-item">
+            <span className="label">Strongest AP</span>
+            <span className="value">{inspectedCoverage.strongestApId || 'None'}</span>
           </div>
           <div className="kpi-item">
             <span className="label">Coverage Tier</span>
@@ -222,4 +234,3 @@ export const OverviewPanel: React.FC = () => {
     </div>
   )
 }
-

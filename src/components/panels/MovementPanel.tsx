@@ -181,14 +181,22 @@ export const MovementPanel: React.FC = () => {
           {/* Real-time Agent Telemetry Grid */}
           <dl className="property-list">
             <div>
+              <dt>Current Building / Floor</dt>
+              <dd>Building {selectedAgent.buildingId} · {selectedAgent.floor}</dd>
+            </div>
+            <div>
               <dt>Current Room</dt>
               <dd>{selectedAgent.roomName}</dd>
             </div>
             <div>
-              <dt>Coordinates</dt>
+              <dt>Position (X, Y, Z)</dt>
               <dd>
-                X: {selectedAgent.x.toFixed(2)}, Z: {selectedAgent.z.toFixed(2)}
+                {selectedAgent.x.toFixed(2)}, {selectedAgent.y.toFixed(2)}, {selectedAgent.z.toFixed(2)}
               </dd>
+            </div>
+            <div>
+              <dt>Route / Movement</dt>
+              <dd>{routes[selectedAgent.route]?.name ?? selectedAgent.route} · {selectedAgent.state}</dd>
             </div>
             <div>
               <dt>Strongest AP</dt>
@@ -246,4 +254,3 @@ export const MovementPanel: React.FC = () => {
     </div>
   )
 }
-

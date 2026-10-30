@@ -10,6 +10,7 @@ import type { MeshOptions } from '../components/Scene'
 const DEFAULT_SETTINGS: AppSettings = {
   updateIntervalMs: 250,
   defaultBuildingId: '410',
+  defaultFloorId: 'Floor 1',
   defaultRoomId: 'storage_room_01',
   defaultHeatmapVisible: true,
   defaultPropagationMode: 'combined',
@@ -18,6 +19,21 @@ const DEFAULT_SETTINGS: AppSettings = {
   maxTrailLength: 60,
   bodyAttenuationDb: 2.5
 }
+
+const createDefaultPropagationSettings = (
+  mode: PropagationSettings['mode'],
+  bodyAttenuationDb: number
+): PropagationSettings => ({
+  scaleMetersPerUnit: 1.0,
+  exponent: 3.0,
+  receiverGainDbi: 0,
+  mode,
+  selectedApId: 'ap-410-storage',
+  resolution: 18,
+  bodyAttenuationDb,
+  wallAttenuation: { partition: 3.5, exterior: 12.0, glass: 2.5, concrete: 15, brick: 10 },
+  heatmapOpacity: 0.44
+})
 
 const LOCAL_STORAGE_KEY = 'campus-sentinel-settings'
 
@@ -64,7 +80,11 @@ interface CampusContextType {
   heatmapVisible: boolean
   setHeatmapVisible: (v: boolean | ((prev: boolean) => boolean)) => void
   coverage: CoverageCell[]
+  localCoverage: CoverageCell[]
   inspectedCoverage: CoverageCell
+  updateNodePower: (id: string, powerDbm: number) => void
+  updateNodeGain: (id: string, gainDbi: number) => void
+  updateNodeBand: (id: string, band: WifiNode['band']) => void
 
   // Movement
   agents: Agent[]
@@ -126,14 +146,20 @@ export const CampusProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   const [page, setPage] = useState<PageId>('overview')
   const [sceneMode, setSceneMode] = useState<SimulationMode>('campus')
   const [selectedBuildingId, setSelectedBuildingId] = useState<string>(settings.defaultBuildingId)
-  const [selectedFloorId, setSelectedFloorId] = useState<string>('Floor 1')
+  const [selectedFloorId, setSelectedFloorId] = useState<string>(settings.defaultFloorId)
   const [selectedRoomId, setSelectedRoomId] = useState<string>(settings.defaultRoomId)
-  const [selectedApId, setSelectedApId] = useState<string>('ap-410-storage')
+  const [selectedApId, setSelectedApIdState] = useState<string>('ap-410-storage')
   const [selectedAgentId, setSelectedAgentId] = useState<string>('agent-01')
   const [cutaway, setCutaway] = useState<boolean>(false)
 
   // 3. Mesh Nodes & Visual Options
-  const [nodes, setNodes] = useState<WifiNode[]>(wifiNodes)
+  const [nodes, setNodes] = useState<WifiNode[]>(
+    wifiNodes.map(node => ({
+      ...node,
+      powerDbm: node.powerDbm ?? 18,
+      gainDbi: node.gainDbi ?? 0
+    }))
+  )
   const [meshOptions, setMeshOptions] = useState<MeshOptions>({
     visible: true,
     labels: true,
@@ -144,16 +170,11 @@ export const CampusProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   })
 
   // 4. Propagation Settings
-  const [propSettings, setPropSettings] = useState<PropagationSettings>({
-    scaleMetersPerUnit: 1.0,
-    exponent: 3.0,
-    receiverGainDbi: 0,
-    mode: settings.defaultPropagationMode,
-    selectedApId: 'ap-410-storage',
-    resolution: 18,
-    bodyAttenuationDb: settings.bodyAttenuationDb
-  })
-  const [heatmapVisible, setHeatmapVisible] = useState<boolean>(settings.defaultHeatmapVisible)
+  const [propSettings, setPropSettings] = useState<PropagationSettings>(() =>
+    createDefaultPropagationSettings(settings.defaultPropagationMode, settings.bodyAttenuationDb)
+  )
+  const previousPropSettings = useRef(propSettings)
+  const [heatmapVisible, setHeatmapVisibleState] = useState<boolean>(settings.defaultHeatmapVisible)
 
   // 5. Movement & Agents
   const [agents, setAgents] = useState<Agent[]>([
@@ -165,7 +186,9 @@ export const CampusProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       index: 0,
       progress: 0,
       x: -6,
+      y: 0,
       z: 2,
+      buildingId: '410',
       room: 'lobby',
       roomName: 'Welcome Lobby / Hallway',
       floor: 'Floor 1',
@@ -183,7 +206,9 @@ export const CampusProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       index: 0,
       progress: 0,
       x: -6,
+      y: 0,
       z: -3,
+      buildingId: '410',
       room: 'lobby',
       roomName: 'Welcome Lobby / Hallway',
       floor: 'Floor 1',
@@ -232,6 +257,41 @@ export const CampusProvider: React.FC<{ children: React.ReactNode }> = ({ childr
     setEvents(prev => [newEvent, ...prev].slice(0, 200))
   }
 
+  useEffect(() => {
+    const previous = previousPropSettings.current
+    const changedSettings = (Object.keys(propSettings) as (keyof PropagationSettings)[])
+      .filter(key => previous[key] !== propSettings[key])
+    if (changedSettings.length > 0) {
+      addEvent(
+        'propagation_changed',
+        'propagation',
+        'Propagation Settings Changed',
+        `Updated: ${changedSettings.join(', ')}.`,
+        selectedApId
+      )
+      previousPropSettings.current = propSettings
+    }
+  }, [propSettings, selectedApId])
+
+  const setSelectedApId = (id: string) => {
+    setSelectedApIdState(id)
+    setPropSettings(previous => ({ ...previous, selectedApId: id }))
+  }
+
+  const setHeatmapVisible = (value: boolean | ((previous: boolean) => boolean)) => {
+    const next = typeof value === 'function' ? value(heatmapVisible) : value
+    if (next !== heatmapVisible) {
+      addEvent(
+        'heatmap_toggled',
+        'propagation',
+        next ? 'Heatmap Activated' : 'Heatmap Deactivated',
+        `3D propagation heatmap switched ${next ? 'on' : 'off'}.`,
+        selectedBuildingId
+      )
+      setHeatmapVisibleState(next)
+    }
+  }
+
   const clearEvents = () => {
     setEvents([])
   }
@@ -241,31 +301,73 @@ export const CampusProvider: React.FC<{ children: React.ReactNode }> = ({ childr
     return nodes.map(n => ({
       id: n.id,
       x: n.position[0],
+      y: n.position[1],
       z: n.position[2],
       frequencyGHz: n.band === '6 GHz' ? 6.0 : 5.0,
-      powerDbm: 18.0,
+      powerDbm: n.powerDbm ?? 18,
+      gainDbi: n.gainDbi ?? 0,
       active: n.active
     }))
   }, [nodes])
 
   // Active humans for propagation obstruction (illustrative assumption)
   const activeHumanPoints = useMemo(() => {
-    return agents.filter(a => a.active).map(a => ({ x: a.x, z: a.z }))
+    return agents.filter(a => a.active).map(a => ({ id: a.id, x: a.x, z: a.z, radius: 0.35 }))
   }, [agents])
 
-  // Coverage Grid calculation across Building 410 floor plan
-  // Cached when static, updated when APs change, propSettings change, or agents move
+  const roomContains = (x: number, z: number) => rooms.some(room =>
+    x >= room.position[0] - room.size[0] / 2 &&
+    x <= room.position[0] + room.size[0] / 2 &&
+    z >= room.position[2] - room.size[2] / 2 &&
+    z <= room.position[2] + room.size[2] / 2
+  )
+
+  // Floor 1 heatmap is clipped to the configured room footprints and remains
+  // cached while agents move.
   const coverage = useMemo(() => {
-    // Floor 1 bounds covering Hallway, Storage, and Seminar
-    const bounds = { minX: -9.5, maxX: 11.5, minZ: -7.5, maxZ: 7.5 }
-    return coverageGrid(bounds, transmitters, buildingWalls, propSettings, activeHumanPoints)
-  }, [transmitters, propSettings, activeHumanPoints])
+    const bounds = {
+      minX: Math.min(...rooms.map(room => room.position[0] - room.size[0] / 2)),
+      maxX: Math.max(...rooms.map(room => room.position[0] + room.size[0] / 2)),
+      minZ: Math.min(...rooms.map(room => room.position[2] - room.size[2] / 2)),
+      maxZ: Math.max(...rooms.map(room => room.position[2] + room.size[2] / 2))
+    }
+    return coverageGrid(bounds, transmitters, buildingWalls, propSettings)
+      .filter(cell => roomContains(cell.x, cell.z))
+  }, [transmitters, propSettings])
+
+  // Recalculate only small neighborhoods around moving occupants; the complete
+  // room heatmap above is not regenerated on each movement interval.
+  const localCoverage = useMemo(() => {
+    const cells = new Map<string, CoverageCell>()
+    for (const agent of agents) {
+      if (!agent.active) continue
+      const radius = 1.5
+      const localCells = coverageGrid(
+        {
+          minX: agent.x - radius,
+          maxX: agent.x + radius,
+          minZ: agent.z - radius,
+          maxZ: agent.z + radius
+        },
+        transmitters,
+        buildingWalls,
+        propSettings,
+        activeHumanPoints
+      )
+      for (const cell of localCells) {
+        if (roomContains(cell.x, cell.z)) {
+          cells.set(`${cell.x.toFixed(3)},${cell.z.toFixed(3)}`, cell)
+        }
+      }
+    }
+    return Array.from(cells.values())
+  }, [agents, transmitters, propSettings, activeHumanPoints])
 
   // Inspected coverage at selected point or room
   const inspectedCoverage = useMemo(() => {
-    const selectedAgent = agents.find(a => a.id === selectedAgentId)
+    const selectedAgent = page === 'movement' ? agents.find(a => a.id === selectedAgentId) : undefined
     const targetPoint = selectedAgent
-      ? { x: selectedAgent.x, z: selectedAgent.z }
+      ? { x: selectedAgent.x, y: selectedAgent.y, z: selectedAgent.z }
       : selectedRoomId === 'classroom_a'
       ? { x: 5, z: -6 }
       : selectedRoomId === 'storage_room_01'
@@ -273,25 +375,76 @@ export const CampusProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       : { x: -5, z: 0 }
 
     return coverageAt(targetPoint, transmitters, buildingWalls, propSettings, activeHumanPoints)
-  }, [agents, selectedAgentId, selectedRoomId, transmitters, propSettings, activeHumanPoints])
+  }, [page, agents, selectedAgentId, selectedRoomId, transmitters, propSettings, activeHumanPoints])
+
+  const updateNodePower = (id: string, powerDbm: number) => {
+    if (!Number.isFinite(powerDbm) || powerDbm < 0 || powerDbm > 30) {
+      throw new RangeError('Simulated AP transmit power must be between 0 and 30 dBm')
+    }
+    const node = nodes.find(candidate => candidate.id === id)
+    if (!node) return
+    setNodes(previous => previous.map(candidate =>
+      candidate.id === id ? { ...candidate, powerDbm } : candidate
+    ))
+    addEvent(
+      'propagation_changed',
+      'propagation',
+      `Transmit Power Changed: ${node.name}`,
+      `${id} transmit power set to ${powerDbm.toFixed(1)} dBm.`,
+      id
+    )
+  }
+
+  const updateNodeGain = (id: string, gainDbi: number) => {
+    if (!Number.isFinite(gainDbi) || gainDbi < -10 || gainDbi > 20) {
+      throw new RangeError('Simulated AP antenna gain must be between -10 and 20 dBi')
+    }
+    const node = nodes.find(candidate => candidate.id === id)
+    if (!node) return
+    setNodes(previous => previous.map(candidate =>
+      candidate.id === id ? { ...candidate, gainDbi } : candidate
+    ))
+    addEvent(
+      'propagation_changed',
+      'propagation',
+      `Antenna Gain Changed: ${node.name}`,
+      `${id} transmit antenna gain set to ${gainDbi.toFixed(1)} dBi.`,
+      id
+    )
+  }
+
+  const updateNodeBand = (id: string, band: WifiNode['band']) => {
+    if (band !== '5 GHz' && band !== '6 GHz') {
+      throw new RangeError('Access point band must be 5 GHz or 6 GHz')
+    }
+    const node = nodes.find(candidate => candidate.id === id)
+    if (!node || node.band === band) return
+    setNodes(previous => previous.map(candidate =>
+      candidate.id === id ? { ...candidate, band } : candidate
+    ))
+    addEvent(
+      'propagation_changed',
+      'propagation',
+      `Frequency Band Changed: ${node.name}`,
+      `${id} frequency changed to ${band}.`,
+      id
+    )
+  }
 
   // Toggle AP Active Status
   const toggleNodeActive = (id: string) => {
-    setNodes(prev =>
-      prev.map(n => {
-        if (n.id === id) {
-          const nextActive = !n.active
-          addEvent(
-            nextActive ? 'ap_enabled' : 'ap_disabled',
-            'mesh',
-            nextActive ? `AP Enabled: ${n.name}` : `AP Disabled: ${n.name}`,
-            `Transmitter ${n.id} switched to ${nextActive ? 'active' : 'offline'}.`,
-            n.id
-          )
-          return { ...n, active: nextActive }
-        }
-        return n
-      })
+    const node = nodes.find(candidate => candidate.id === id)
+    if (!node) return
+    const nextActive = !node.active
+    setNodes(previous => previous.map(candidate =>
+      candidate.id === id ? { ...candidate, active: nextActive } : candidate
+    ))
+    addEvent(
+      nextActive ? 'ap_enabled' : 'ap_disabled',
+      'mesh',
+      nextActive ? `AP Enabled: ${node.name}` : `AP Disabled: ${node.name}`,
+      `Transmitter ${node.id} switched to ${nextActive ? 'active' : 'offline'}.`,
+      node.id
     )
   }
 
@@ -323,8 +476,12 @@ export const CampusProvider: React.FC<{ children: React.ReactNode }> = ({ childr
 
   // Agent Management
   const addAgent = () => {
-    const newIndex = agents.length + 1
-    const id = `agent-${String(newIndex).padStart(2, '0')}`
+    let newIndex = 1
+    let id = `agent-${String(newIndex).padStart(2, '0')}`
+    while (agents.some(agent => agent.id === id)) {
+      newIndex += 1
+      id = `agent-${String(newIndex).padStart(2, '0')}`
+    }
     const color = AGENT_COLORS[(newIndex - 1) % AGENT_COLORS.length]
     const routeKeys = Object.keys(routes)
     const assignedRoute = routeKeys[(newIndex - 1) % routeKeys.length]
@@ -339,7 +496,9 @@ export const CampusProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       index: 0,
       progress: 0,
       x: startWaypoint.x,
+      y: 0,
       z: startWaypoint.z,
+      buildingId: '410',
       room: startWaypoint.room,
       roomName: startWaypoint.room === 'storage_room_01' ? 'Storage Room' : startWaypoint.room === 'classroom_a' ? 'Seminar Room' : 'Welcome Lobby / Hallway',
       floor: 'Floor 1',
@@ -366,42 +525,85 @@ export const CampusProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       alert('At least one agent must remain in the simulation.')
       return
     }
-    setAgents(prev => {
-      const remaining = prev.filter(a => a.id !== id)
-      if (selectedAgentId === id && remaining.length > 0) {
-        setSelectedAgentId(remaining[0].id)
-      }
-      return remaining
+    const remaining = agents.filter(agent => agent.id !== id)
+    if (remaining.length === agents.length) return
+    setAgents(remaining)
+    setSignalHistory(previous => {
+      const next = { ...previous }
+      delete next[id]
+      return next
     })
+    if (selectedAgentId === id) setSelectedAgentId(remaining[0].id)
     addEvent('agent_removed', 'movement', `Agent Removed: ${id}`, `Removed ${id} from active simulation.`, id)
   }
 
   const updateAgent = (id: string, partial: Partial<Agent>) => {
-    setAgents(prev =>
-      prev.map(a => {
-        if (a.id === id) {
-          const updated = { ...a, ...partial }
-          if (partial.route && partial.route !== a.route) {
-            // Reset position to route start when route changes
-            const routeDef = routes[partial.route] || routes.route_1
-            const startWp = routeDef.waypoints[0]
-            updated.index = 0
-            updated.x = startWp.x
-            updated.z = startWp.z
-            updated.trail = settings.showTrails ? [[startWp.x, startWp.z]] : []
-            addEvent(
-              'movement',
-              'movement',
-              `Route Changed: ${id}`,
-              `${id} reassigned to ${routeDef.name}.`,
-              id
-            )
-          }
-          return updated
-        }
-        return a
-      })
-    )
+    const currentAgent = agents.find(agent => agent.id === id)
+    if (!currentAgent) return
+    const routeChanged = partial.route !== undefined && partial.route !== currentAgent.route
+    const activeChanged = partial.active !== undefined && partial.active !== currentAgent.active
+    const speedChanged = partial.speed !== undefined && partial.speed !== currentAgent.speed
+    const route = routeChanged ? routes[partial.route!] || routes.route_1 : undefined
+    const startWaypoint = route?.waypoints[0]
+    setAgents(previous => previous.map(agent => {
+      if (agent.id !== id) return agent
+      return {
+        ...agent,
+        ...partial,
+        ...(activeChanged ? {
+          state: !partial.active
+            ? 'stopped' as const
+            : movementState === 'moving'
+            ? 'moving' as const
+            : movementState === 'paused'
+            ? 'paused' as const
+            : 'idle' as const
+        } : {}),
+        ...(startWaypoint ? {
+          index: 0,
+          progress: 0,
+          x: startWaypoint.x,
+          z: startWaypoint.z,
+          room: startWaypoint.room,
+          roomName: startWaypoint.room === 'storage_room_01'
+            ? 'Storage Room'
+            : startWaypoint.room === 'classroom_a'
+            ? 'Seminar Room'
+            : 'Welcome Lobby / Hallway',
+          trail: settings.showTrails ? [[startWaypoint.x, startWaypoint.z] as [number, number]] : []
+        } : {})
+      }
+    }))
+    if (route) {
+      addEvent('route_changed', 'movement', `Route Changed: ${id}`, `${id} reassigned to ${route.name}.`, id)
+      if (startWaypoint && startWaypoint.room !== currentAgent.room) {
+        addEvent(
+          'room_entered',
+          'movement',
+          `${currentAgent.name} Entered ${startWaypoint.room}`,
+          `Route change moved the agent from ${currentAgent.room} to ${startWaypoint.room}.`,
+          id
+        )
+      }
+    }
+    if (activeChanged) {
+      addEvent(
+        partial.active ? 'agent_started' : 'agent_stopped',
+        'movement',
+        partial.active ? `${currentAgent.name} Activated` : `${currentAgent.name} Deactivated`,
+        `${id} ${partial.active ? 'joined' : 'left'} the movement simulation.`,
+        id
+      )
+    }
+    if (speedChanged) {
+      addEvent(
+        'movement',
+        'movement',
+        `Movement Speed Changed: ${id}`,
+        `${id} speed set to ${partial.speed!.toFixed(1)} m/s.`,
+        id
+      )
+    }
   }
 
   const startMovement = () => {
@@ -430,6 +632,7 @@ export const CampusProvider: React.FC<{ children: React.ReactNode }> = ({ childr
 
   const resetMovement = () => {
     setMovementState('idle')
+    setSignalHistory({})
     setAgents(prev =>
       prev.map(a => {
         const routeDef = routes[a.route] || routes.route_1
@@ -478,6 +681,12 @@ export const CampusProvider: React.FC<{ children: React.ReactNode }> = ({ childr
 
   const updateSettings = (partial: Partial<AppSettings>) => {
     setSettings(prev => ({ ...prev, ...partial }))
+    if (partial.bodyAttenuationDb !== undefined) {
+      setPropSettings(previous => ({
+        ...previous,
+        bodyAttenuationDb: partial.bodyAttenuationDb
+      }))
+    }
   }
 
   const saveSettings = () => {
@@ -497,6 +706,22 @@ export const CampusProvider: React.FC<{ children: React.ReactNode }> = ({ childr
 
   const resetSettings = () => {
     setSettings(DEFAULT_SETTINGS)
+    setSelectedBuildingId(DEFAULT_SETTINGS.defaultBuildingId)
+    setSelectedFloorId(DEFAULT_SETTINGS.defaultFloorId)
+    setSelectedRoomId(DEFAULT_SETTINGS.defaultRoomId)
+    setSelectedApId('ap-410-storage')
+    setHeatmapVisible(DEFAULT_SETTINGS.defaultHeatmapVisible)
+    setSceneMode('campus')
+    setMeshOptions(previous => ({ ...previous, scope: 'campus' }))
+    setNodes(wifiNodes.map(node => ({
+      ...node,
+      powerDbm: node.powerDbm ?? 18,
+      gainDbi: node.gainDbi ?? 0
+    })))
+    setPropSettings(createDefaultPropagationSettings(
+      DEFAULT_SETTINGS.defaultPropagationMode,
+      DEFAULT_SETTINGS.bodyAttenuationDb
+    ))
     localStorage.removeItem(LOCAL_STORAGE_KEY)
     addEvent('system', 'system', 'Settings Reset', 'Configuration restored to default simulation parameters.', 'settings')
   }
@@ -506,9 +731,6 @@ export const CampusProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   // and updates signal history
   const agentsRef = useRef(agents)
   agentsRef.current = agents
-  const movementStateRef = useRef(movementState)
-  movementStateRef.current = movementState
-
   useEffect(() => {
     if (movementState !== 'moving') return
 
@@ -517,33 +739,34 @@ export const CampusProvider: React.FC<{ children: React.ReactNode }> = ({ childr
 
     const timer = setInterval(() => {
       const currentAgents = agentsRef.current
-      const updatedAgents: Agent[] = []
+      const updatedAgents = currentAgents.map(agent =>
+        agent.active && agent.state === 'moving'
+          ? advance(agent, dtSeconds, 1.0, settings.maxTrailLength)
+          : agent
+      )
+      const tickHumanPoints = updatedAgents
+        .filter(agent => agent.active)
+        .map(agent => ({ id: agent.id, x: agent.x, z: agent.z, radius: 0.35 }))
       const timestamp = Date.now()
       const timeLabel = new Date(timestamp).toLocaleTimeString()
 
-      currentAgents.forEach(agent => {
-        if (!agent.active || agent.state !== 'moving') {
-          updatedAgents.push(agent)
-          return
-        }
-
-        const prevRoom = agent.room
-        const prevLoops = agent.loopsCompleted
-        const advanced = advance(agent, dtSeconds, 1.0, settings.maxTrailLength)
+      currentAgents.forEach((agent, index) => {
+        const advanced = updatedAgents[index]
+        if (!agent.active || agent.state !== 'moving') return
 
         // Room change detection
-        if (advanced.room !== prevRoom) {
+        if (advanced.room !== agent.room) {
           addEvent(
             'room_entered',
             'movement',
             `${agent.name} Entered ${advanced.roomName}`,
-            `Transitioned from ${prevRoom} to ${advanced.roomName}.`,
+            `Transitioned from ${agent.room} to ${advanced.roomName}.`,
             agent.id
           )
         }
 
         // Loop completion detection
-        if (advanced.loopsCompleted > prevLoops) {
+        if (advanced.loopsCompleted > agent.loopsCompleted) {
           addEvent(
             'route_completed',
             'movement',
@@ -555,11 +778,11 @@ export const CampusProvider: React.FC<{ children: React.ReactNode }> = ({ childr
 
         // Calculate real propagation estimate at agent position
         const signal = coverageAt(
-          { x: advanced.x, z: advanced.z },
+          { x: advanced.x, y: advanced.y, z: advanced.z },
           transmitters,
           buildingWalls,
           propSettings,
-          activeHumanPoints
+          tickHumanPoints
         )
 
         // Record real telemetry history
@@ -569,7 +792,10 @@ export const CampusProvider: React.FC<{ children: React.ReactNode }> = ({ childr
             timestamp,
             timeLabel,
             agentId: agent.id,
+            buildingId: agent.buildingId,
+            floor: agent.floor,
             x: advanced.x,
+            y: advanced.y,
             z: advanced.z,
             room: advanced.room,
             roomName: advanced.roomName,
@@ -583,14 +809,13 @@ export const CampusProvider: React.FC<{ children: React.ReactNode }> = ({ childr
           }
         })
 
-        updatedAgents.push(advanced)
       })
 
       setAgents(updatedAgents)
     }, intervalMs)
 
     return () => clearInterval(timer)
-  }, [movementState, settings.updateIntervalMs, settings.maxTrailLength, transmitters, propSettings, activeHumanPoints])
+  }, [movementState, settings.updateIntervalMs, settings.maxTrailLength, transmitters, propSettings])
 
   return (
     <CampusContext.Provider
@@ -620,7 +845,11 @@ export const CampusProvider: React.FC<{ children: React.ReactNode }> = ({ childr
         heatmapVisible,
         setHeatmapVisible,
         coverage,
+        localCoverage,
         inspectedCoverage,
+        updateNodePower,
+        updateNodeGain,
+        updateNodeBand,
         agents,
         movementState,
         addAgent,
@@ -658,4 +887,3 @@ export function useCampus() {
   }
   return context
 }
-

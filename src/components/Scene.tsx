@@ -25,7 +25,9 @@ type Props = {
   options: MeshOptions
   nodes: WifiNode[]
   coverage?: CoverageCell[]
+  localCoverage?: CoverageCell[]
   heatmap?: boolean
+  heatmapOpacity?: number
   agents?: Agent[]
   selectedAgentId?: string
   showTrails?: boolean
@@ -274,20 +276,36 @@ function heatColor(rssi: number): string {
   return '#ef4444' // very weak/none - red
 }
 
-function HeatmapLayer({ cells }: { cells: CoverageCell[] }) {
+function HeatmapLayer({
+  cells,
+  localCells = [],
+  opacity = 0.44
+}: {
+  cells: CoverageCell[]
+  localCells?: CoverageCell[]
+  opacity?: number
+}) {
+  const renderCells = (items: CoverageCell[], y: number, alpha: number, keyPrefix: string) =>
+    items.map((cell, index) => (
+      <mesh
+        key={`${keyPrefix}-${cell.x}-${cell.z}-${index}`}
+        position={[cell.x, y, cell.z]}
+        rotation-x={-Math.PI / 2}
+      >
+        <planeGeometry args={[cell.cellWidth ?? 0.78, cell.cellDepth ?? 0.78]} />
+        <meshBasicMaterial
+          color={heatColor(cell.rssi)}
+          transparent
+          opacity={alpha}
+          depthWrite={false}
+        />
+      </mesh>
+    ))
+
   return (
     <group>
-      {cells.map((c, i) => (
-        <mesh key={i} position={[c.x, 0.12, c.z]} rotation-x={-Math.PI / 2}>
-          <planeGeometry args={[0.78, 0.78]} />
-          <meshBasicMaterial
-            color={heatColor(c.rssi)}
-            transparent
-            opacity={0.44}
-            depthWrite={false}
-          />
-        </mesh>
-      ))}
+      {renderCells(cells, 0.12, opacity, 'coverage')}
+      {renderCells(localCells, 0.14, Math.min(0.8, opacity + 0.18), 'local')}
     </group>
   )
 }
@@ -332,7 +350,7 @@ function LowPolyAgent({
 
       {/* Low-poly Human Agent mesh */}
       <group
-        position={[agent.x, 0, agent.z]}
+        position={[agent.x, agent.y, agent.z]}
         onClick={e => {
           e.stopPropagation()
           onSelect(agent.id)
@@ -594,7 +612,9 @@ function InteriorScene({
   options,
   cutaway,
   coverage,
+  localCoverage,
   heatmap,
+  heatmapOpacity,
   agents,
   selectedAgentId,
   showTrails,
@@ -666,7 +686,13 @@ function InteriorScene({
       />
 
       {/* Wi-Fi Propagation Heatmap Layer */}
-      {heatmap && coverage && <HeatmapLayer cells={coverage} />}
+      {heatmap && coverage && (
+        <HeatmapLayer
+          cells={coverage}
+          localCells={localCoverage}
+          opacity={heatmapOpacity}
+        />
+      )}
 
       {/* Human Agents */}
       <AgentsLayer

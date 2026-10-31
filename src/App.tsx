@@ -1,5 +1,5 @@
 import React from 'react'
-import Scene from './components/Scene'
+import Scene, { type SceneViewPreset } from './components/Scene'
 import { CampusProvider, useCampus } from './context/CampusContext'
 import type { PageId } from './types/campus'
 import { OverviewPanel } from './components/panels/OverviewPanel'
@@ -10,6 +10,7 @@ import { PropagationPanel } from './components/panels/PropagationPanel'
 import { MovementPanel } from './components/panels/MovementPanel'
 import { EventsPanel } from './components/panels/EventsPanel'
 import { SettingsPanel } from './components/panels/SettingsPanel'
+import WifiSensingExperience from './components/wifi/WifiSensingExperience'
 
 const NAV_ITEMS: { id: PageId; label: string; icon: string }[] = [
   { id: 'overview', label: 'Overview', icon: '📊' },
@@ -18,6 +19,7 @@ const NAV_ITEMS: { id: PageId; label: string; icon: string }[] = [
   { id: 'mesh', label: 'Wi-Fi Mesh', icon: '📶' },
   { id: 'propagation', label: 'Wi-Fi Propagation', icon: '📡' },
   { id: 'movement', label: 'Human Movement', icon: '🚶' },
+  { id: 'sensing', label: 'Wi-Fi Sensing Demonstrations', icon: '🧭' },
   { id: 'events', label: 'Events', icon: '📋' },
   { id: 'settings', label: 'Settings', icon: '⚙' }
 ]
@@ -38,9 +40,11 @@ function MainLayout() {
     setCutaway,
     nodes,
     meshOptions,
+    setMeshOptions,
     coverage,
     localCoverage,
     heatmapVisible,
+    setHeatmapVisible,
     propSettings,
     agents,
     settings,
@@ -50,13 +54,57 @@ function MainLayout() {
 
   // Handle navigation tab click with sensible camera/mode presets
   const handleNavClick = (targetPage: PageId) => {
-    setPage(targetPage)
     if (targetPage === 'campus') {
       exitToCampus()
     } else if (['indoor', 'propagation', 'movement'].includes(targetPage)) {
       enterBuilding('410')
+      setSceneMode('interior')
+    }
+    setPage(targetPage)
+  }
+
+  const handleSceneViewChange = (preset: SceneViewPreset) => {
+    if (preset === 'campus') {
+      exitToCampus()
+      setPage('campus')
+    } else if (preset === 'wifi') {
+      exitToCampus()
+      setSceneMode('campus')
+      setPage('mesh')
+      setMeshOptions(previous => ({
+        ...previous,
+        scope: 'campus',
+        visible: true,
+        labels: true,
+        links: true,
+        coverageEffects: true
+      }))
+    } else if (preset === 'propagation') {
+      enterBuilding('410')
+      setSceneMode('interior')
+      setPage('propagation')
+      setHeatmapVisible(true)
+    } else if (preset === 'sensing') {
+      enterBuilding('410')
+      setSceneMode('interior')
+      setPage('sensing')
+      setHeatmapVisible(true)
+    } else {
+      enterBuilding('410')
+      setSceneMode('interior')
+      setPage('movement')
     }
   }
+
+  const viewPreset: SceneViewPreset = page === 'mesh'
+    ? 'wifi'
+    : page === 'propagation'
+    ? 'propagation'
+    : page === 'movement'
+    ? 'movement'
+    : page === 'sensing'
+    ? 'sensing'
+    : 'campus'
 
   const renderActivePanel = () => {
     switch (page) {
@@ -72,6 +120,8 @@ function MainLayout() {
         return <PropagationPanel />
       case 'movement':
         return <MovementPanel />
+      case 'sensing':
+        return null
       case 'events':
         return <EventsPanel />
       case 'settings':
@@ -82,7 +132,7 @@ function MainLayout() {
   }
 
   return (
-    <main>
+    <main className={page === 'sensing' ? 'sensing-layout' : undefined}>
       {/* 1. Left Navigation Sidebar */}
       <aside className="sidebar">
         <div className="brand">
@@ -131,6 +181,8 @@ function MainLayout() {
             <h1>
               {page === 'overview'
                 ? 'Unified Monitoring Dashboard'
+                : page === 'sensing'
+                ? 'Wi-Fi Sensing Demonstrations'
                 : sceneMode === 'campus'
                 ? 'Campus 3D Viewport'
                 : 'Building 410 Interior Orbit'}
@@ -138,7 +190,20 @@ function MainLayout() {
           </div>
 
           <div className="header-actions">
-            {sceneMode === 'campus' ? (
+            {page === 'sensing' ? (
+              <button
+                className="secondary-action-btn"
+                onClick={() => {
+                  if (!document.fullscreenElement) {
+                    document.documentElement.requestFullscreen?.()
+                  } else {
+                    document.exitFullscreen?.()
+                  }
+                }}
+              >
+                Fullscreen
+              </button>
+            ) : sceneMode === 'campus' ? (
               <button className="primary-action-btn" onClick={() => enterBuilding('410')}>
                 Enter Building 410 ➔
               </button>
@@ -147,7 +212,7 @@ function MainLayout() {
                 ⬅ Campus View
               </button>
             )}
-            {sceneMode === 'interior' && (
+            {page !== 'sensing' && sceneMode === 'interior' && (
               <button
                 className={`secondary-action-btn ${cutaway ? 'selected' : ''}`}
                 onClick={() => setCutaway(c => !c)}
@@ -155,7 +220,7 @@ function MainLayout() {
                 Cutaway {cutaway ? 'ON' : 'OFF'}
               </button>
             )}
-            <button
+            {page !== 'sensing' && <button
               className="secondary-action-btn"
               onClick={() => {
                 if (!document.fullscreenElement) {
@@ -166,13 +231,13 @@ function MainLayout() {
               }}
             >
               Fullscreen
-            </button>
+            </button>}
           </div>
         </header>
 
         {/* Viewport with interactive Three.js Scene */}
-        <div className="viewport">
-          <Scene
+        <div className={`viewport ${page === 'sensing' ? 'sensing-viewport' : ''}`}>
+          {page === 'sensing' ? <WifiSensingExperience /> : <Scene
             mode={sceneMode}
             selected={
               page === 'movement'
@@ -186,10 +251,13 @@ function MainLayout() {
             nodes={nodes}
             coverage={coverage}
             localCoverage={localCoverage}
-            heatmap={heatmapVisible && sceneMode === 'interior'}
+            heatmap={heatmapVisible}
             heatmapOpacity={propSettings.heatmapOpacity}
             agents={agents}
             selectedAgentId={selectedAgentId}
+            selectedApId={selectedApId}
+            viewPreset={viewPreset}
+            onViewPresetChange={handleSceneViewChange}
             showTrails={settings.showTrails}
             onSelectBuilding={id => {
               setSelectedBuildingId(id)
@@ -209,16 +277,18 @@ function MainLayout() {
                 setPage('movement')
               }
             }}
-          />
+          />}
 
-          <div className="scene-badge">
-            SIMULATED PROPAGATION — NOT LIVE NETWORK MEASUREMENTS
-          </div>
+          {page !== 'sensing' && (
+            <div className="scene-badge">
+              SIMULATED PROPAGATION — NOT LIVE NETWORK MEASUREMENTS
+            </div>
+          )}
         </div>
       </section>
 
       {/* 3. Right Inspector / Dedicated Panel */}
-      <aside className="inspector">{renderActivePanel()}</aside>
+      {page !== 'sensing' && <aside className="inspector">{renderActivePanel()}</aside>}
     </main>
   )
 }

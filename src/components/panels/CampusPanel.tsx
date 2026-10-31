@@ -95,9 +95,20 @@ export const CampusPanel: React.FC = () => {
           >
             Mesh Links {meshOptions.links ? 'Shown' : 'Hidden'}
           </button>
+          <button
+            className={meshOptions.labels ? 'selected' : ''}
+            onClick={() => setMeshOptions(o => ({ ...o, labels: !o.labels }))}
+          >
+            AP Labels {meshOptions.labels ? 'Shown' : 'Hidden'}
+          </button>
+          <button
+            className={meshOptions.coverageEffects ? 'selected' : ''}
+            onClick={() => setMeshOptions(o => ({ ...o, coverageEffects: !o.coverageEffects }))}
+          >
+            Coverage Effects {meshOptions.coverageEffects ? 'Shown' : 'Hidden'}
+          </button>
         </div>
       </div>
     </div>
   )
 }
-

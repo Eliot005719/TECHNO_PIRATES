@@ -9,6 +9,7 @@ export type PageId =
   | 'mesh'
   | 'propagation'
   | 'movement'
+  | 'sensing'
   | 'events'
   | 'settings'
 

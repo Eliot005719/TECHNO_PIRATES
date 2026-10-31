@@ -166,7 +166,8 @@ export const CampusProvider: React.FC<{ children: React.ReactNode }> = ({ childr
     links: true,
     scope: 'campus',
     ceilings: true,
-    furniture: true
+    furniture: true,
+    coverageEffects: true
   })
 
   // 4. Propagation Settings

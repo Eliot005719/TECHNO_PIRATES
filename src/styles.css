@@ -240,6 +240,113 @@ h1 {
   height: 100% !important;
 }
 
+.scene-canvas-shell {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: #dfe8ef;
+}
+
+.scene-overlay-toolbar {
+  position: absolute;
+  z-index: 3;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  pointer-events: none;
+}
+
+.scene-view-presets,
+.scene-camera-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid rgba(136, 146, 157, 0.3);
+  border-radius: 9px;
+  background: rgba(248, 250, 252, 0.87);
+  box-shadow: 0 3px 12px rgba(37, 45, 54, 0.1);
+  backdrop-filter: blur(8px);
+  pointer-events: auto;
+}
+
+.scene-view-presets button,
+.scene-camera-actions button {
+  border: 0;
+  border-radius: 6px;
+  padding: 7px 9px;
+  color: #4d5360;
+  background: transparent;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.scene-view-presets button:hover,
+.scene-camera-actions button:hover {
+  background: rgba(119, 88, 161, 0.1);
+  color: #49316b;
+}
+
+.scene-view-presets button.active {
+  color: #fff;
+  background: #7450a0;
+}
+
+.scene-ap-readout {
+  position: absolute;
+  z-index: 2;
+  top: 66px;
+  right: 14px;
+  display: flex;
+  gap: 9px;
+  align-items: flex-start;
+  max-width: 260px;
+  padding: 10px 12px;
+  border: 1px solid rgba(139, 111, 174, 0.3);
+  border-radius: 9px;
+  background: rgba(250, 248, 253, 0.9);
+  color: #392653;
+  box-shadow: 0 3px 12px rgba(37, 34, 45, 0.1);
+  backdrop-filter: blur(8px);
+  pointer-events: none;
+}
+
+.scene-ap-readout > div {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+
+.scene-ap-readout strong {
+  font: 700 12px var(--font-heading);
+}
+
+.scene-ap-readout span:not(.scene-ap-readout-dot),
+.scene-ap-readout small {
+  color: #70667c;
+  font-size: 10px;
+}
+
+.scene-ap-readout-dot {
+  width: 9px;
+  height: 9px;
+  margin-top: 3px;
+  border-radius: 50%;
+  background: #a76ce8;
+  box-shadow: 0 0 8px rgba(154, 87, 223, 0.55);
+  flex: 0 0 auto;
+}
+
+.viewport:fullscreen {
+  width: 100vw;
+  height: 100vh;
+}
+
 .scene-badge {
   position: absolute;
   bottom: 16px;
@@ -254,6 +361,22 @@ h1 {
   font-weight: 600;
   letter-spacing: 0.05em;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+@media (max-width: 900px) {
+  .scene-overlay-toolbar {
+    flex-direction: column;
+  }
+
+  .scene-camera-actions {
+    align-self: flex-end;
+  }
+
+  .scene-ap-readout {
+    top: 110px;
+    right: 12px;
+    max-width: 220px;
+  }
 }
 
 /* 3. Right Inspector & Panel Area */
@@ -1276,6 +1399,146 @@ dd {
   color: #fff;
 }
 
+.sensing-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sensing-card {
+  background: #faf9fd;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sensing-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.sensing-header-row h3 {
+  margin: 4px 0 0;
+  font: 600 18px var(--font-heading);
+  color: var(--text-main);
+}
+
+.sensing-control-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.sensing-control-row button {
+  width: 100%;
+}
+
+.sensing-layer-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chip {
+  border: 1px solid var(--border-strong);
+  background: #fff;
+  color: var(--text-main);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.chip.active {
+  background: var(--primary-light);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.sensing-caption-box {
+  background: #fff;
+  border: 1px solid #efe9f9;
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sensing-caption-box strong {
+  font: 700 12px var(--font-heading);
+  color: var(--primary);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.sensing-caption-box p {
+  margin: 0;
+  color: var(--text-main);
+  line-height: 1.5;
+  font-size: 13px;
+}
+
+.timeline-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.timeline-bar {
+  overflow: hidden;
+  height: 8px;
+  border-radius: 999px;
+  background: #f0ecf6;
+}
+
+.timeline-bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #9b6ce8, #6846ba);
+}
+
+.timeline-wrap input[type='range'] {
+  width: 100%;
+  accent-color: var(--primary);
+}
+
+.scene-selector-row {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.mini-scene {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  background: #fff;
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.mini-scene.selected {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.sensing-panel .list-item-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+
 .capitalize {
   text-transform: capitalize;
 }
@@ -1372,5 +1635,301 @@ dd {
   .nav-btn {
     justify-content: center;
     padding: 10px 0;
+  }
+}
+
+/* The sensing demo owns the viewport, while the application's navigation remains visible. */
+.sensing-layout {
+  grid-template-columns: 240px minmax(0, 1fr);
+}
+
+.sensing-layout .workspace {
+  grid-column: 2;
+  min-width: 0;
+}
+
+.sensing-viewport {
+  background: #0d0a1a;
+}
+
+.sensing-experience {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: #0d0a1a;
+  color: #ece8ff;
+  font: 14px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif;
+  isolation: isolate;
+}
+
+.sensing-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  touch-action: none;
+}
+
+.sensing-float {
+  position: absolute;
+  z-index: 1;
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  border-radius: 12px;
+  background: rgba(20, 14, 40, 0.82);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(8px);
+}
+
+.sensing-title {
+  top: 12px;
+  left: 12px;
+  padding: 11px 14px;
+  max-width: min(440px, 60vw);
+}
+
+.sensing-title b {
+  letter-spacing: 0.02em;
+  font-size: 15px;
+}
+
+.sensing-title b span {
+  color: #8b5cf6;
+}
+
+.sensing-title > span {
+  display: block;
+  color: #b2aadb;
+  font-size: 12px;
+}
+
+.sensing-telemetry {
+  top: 12px;
+  right: 12px;
+  width: min(340px, 86vw);
+  padding: 8px 12px;
+}
+
+.sensing-telemetry.is-hidden {
+  display: none;
+}
+
+.sensing-telemetry canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.sensing-telemetry small {
+  display: block;
+  margin-top: 4px;
+  color: #b2aadb;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.sensing-telemetry small i {
+  display: inline-block;
+  margin-right: 4px;
+  padding: 1px 7px;
+  border-radius: 99px;
+  background: #8b5cf6;
+  color: #fff;
+  font-size: 11px;
+  font-style: normal;
+}
+
+.sensing-telemetry small select {
+  padding: 2px 6px;
+  border-color: rgba(139, 92, 246, 0.4);
+  border-radius: 6px;
+  background: #201a38;
+  color: #ece8ff;
+  font-size: 11px;
+}
+
+.sensing-data-status {
+  margin-top: 7px;
+  padding-top: 7px;
+  border-top: 1px solid rgba(139, 92, 246, 0.4);
+  color: #b2aadb;
+  font-size: 11px;
+}
+
+.sensing-legend {
+  position: absolute;
+  z-index: 1;
+  left: 12px;
+  bottom: 76px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 44%;
+  color: #b2aadb;
+  font-size: 11px;
+  pointer-events: none;
+}
+
+.sensing-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 8px;
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  border-radius: 20px;
+  background: rgba(20, 14, 40, 0.82);
+  backdrop-filter: blur(8px);
+}
+
+.sensing-legend i {
+  width: 7px;
+  height: 7px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.sensing-legend .ap-dot { background: #a78bfa; }
+.sensing-legend .person-dot { background: #fbbf24; }
+.sensing-legend .activity-dot { background: #22d3ee; }
+
+.sensing-caption {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  bottom: 74px;
+  transform: translateX(-50%);
+  max-width: min(620px, 92%);
+  padding: 10px 15px;
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  border-radius: 12px;
+  background: rgba(20, 14, 40, 0.82);
+  color: #ece8ff;
+  font-size: 13px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+}
+
+.sensing-controls {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 7px;
+  max-width: 96%;
+  padding: 9px 12px;
+  transform: translateX(-50%);
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  border-radius: 12px;
+  background: rgba(20, 14, 40, 0.82);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(8px);
+}
+
+.sensing-controls button {
+  padding: 5px 10px;
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  border-radius: 7px;
+  background: transparent;
+  color: #ece8ff;
+  font-size: 12px;
+}
+
+.sensing-controls button:hover {
+  border-color: #8b5cf6;
+  background: rgba(139, 92, 246, 0.2);
+}
+
+.sensing-controls input[type="range"] {
+  width: 150px;
+  accent-color: #8b5cf6;
+}
+
+.sensing-controls label {
+  color: #b2aadb;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.sensing-controls label input[type="range"] {
+  width: 80px;
+  vertical-align: middle;
+}
+
+.sensing-controls input[type="checkbox"] {
+  accent-color: #8b5cf6;
+  vertical-align: middle;
+}
+
+.sensing-live-ap {
+  position: absolute;
+  right: 12px;
+  bottom: 16px;
+  z-index: 1;
+  max-width: 26%;
+  color: rgba(178, 170, 219, 0.75);
+  font-size: 10px;
+  text-align: right;
+  pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+  .sensing-layout {
+    grid-template-columns: 68px minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .sensing-telemetry {
+    top: auto;
+    right: 8px;
+    bottom: 128px;
+    width: min(260px, 58vw);
+    padding: 8px;
+  }
+
+  .sensing-telemetry canvas {
+    max-height: 90px;
+  }
+
+  .sensing-title {
+    top: 8px;
+    left: 8px;
+    max-width: 58vw;
+  }
+
+  .sensing-legend {
+    left: 8px;
+    bottom: 78px;
+    gap: 4px;
+    max-width: 38%;
+  }
+
+  .sensing-legend span {
+    padding: 4px 6px;
+    font-size: 10px;
+  }
+
+  .sensing-controls {
+    bottom: 8px;
+    max-height: 112px;
+    overflow: auto;
+  }
+
+  .sensing-controls input[type="range"] {
+    width: 110px;
+  }
+
+  .sensing-caption {
+    bottom: 120px;
+    max-width: 94%;
+  }
+
+  .sensing-live-ap {
+    display: none;
   }
 }

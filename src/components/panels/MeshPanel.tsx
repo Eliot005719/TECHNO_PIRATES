@@ -77,7 +77,16 @@ export const MeshPanel: React.FC = () => {
           >
             Labels {meshOptions.labels ? 'ON' : 'OFF'}
           </button>
+          <button
+            className={meshOptions.coverageEffects ? 'selected' : ''}
+            onClick={() => setMeshOptions(o => ({ ...o, coverageEffects: !o.coverageEffects }))}
+          >
+            Coverage Effects {meshOptions.coverageEffects ? 'ON' : 'OFF'}
+          </button>
         </div>
+        <small className="muted">
+          Translucent volumes are illustrative visuals; the heatmap remains connected to calculated propagation.
+        </small>
       </div>
 
       {/* Access Points List */}
